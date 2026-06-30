@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, Route, Routes } from 'react-router-dom'
-import Cadastro from '../cadastro'
+import Cadastro from './Cadastro'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,8 +9,13 @@ function App() {
   return (
     <> 
 
-     <Link to='/cadastro'>Cadastrar</Link>
+<ul>
+    <li>
+      <Link to='/cadastro'>Cadastrar</Link>
+    </li>
+</ul>
 
+   
 
     <Routes>
       <Route path='cadastro' element={<Cadastro/>}> Cadastrar</Route>
