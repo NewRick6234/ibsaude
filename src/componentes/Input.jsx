@@ -1,18 +1,31 @@
-function Input({name, tipo="text"}){
-
-
-return(
-
-      <div className="flex flex-col items-center w-full p-10">
-        <div className="w-full"><label htmlFor="email" className="block text-sm/6 font-medium text-black-100 text-left">{name}</label></div>
-        <div className="mt-2">
-          <input id={name} type={tipo} name={name} required autoComplete="email" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
-        </div>
-      </div>
-
-     
+ export default function Input({ name, tipo = "text", options, ...props }) {
+  return (
+    <div className="w-full m-4"> 
+      <label className="block text-sm font-medium text-gray-700 text-left">
+        {name}
+      </label>
       
-)
-
+      <div className="mt-2">
+        {options ? (
+          <select 
+            name={name} 
+            className="block w-full rounded-md border bg-white px-3 py-1.5 text-base"
+            {...props}
+          >
+            {options.map((opt) => (
+              <option key={opt} value={opt}>{opt}</option>
+            ))}
+          </select>
+        ) : (
+          <input 
+            id={name} 
+            type={tipo} 
+            name={name} 
+            className="block w-full rounded-md border bg-white px-3 py-1.5 text-base" 
+            {...props} 
+          />
+        )}
+      </div>
+    </div>
+  );
 }
-export default Input
