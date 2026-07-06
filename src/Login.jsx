@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom"
+function Login(){
 
-function Cadastro(){
-
-    let form = {
+let form = {
         marginTop: "20px"
     }
     
@@ -36,8 +34,8 @@ function Cadastro(){
         marginTop: "5px"
      }
 
-    return(
-        <div className="flex justify-center">
+return(
+     <div className="flex justify-center">
         <div className="bg-blue-300 w-1/4 flex flex-col items-center">
          <img style={imagem} src="/ib_saude.png" className="w-1/4" />
         <p className="font-semibold">Bem vindo ao IBSaúde</p>  {/*descricao ou introducao */}
@@ -48,10 +46,6 @@ function Cadastro(){
         
         {/* criar componente da área onde estará o label e o input */}
 
-        <div style={campoForm}>    
-        <label style={label}>Nome</label>
-        <input style={inputar} type="text" id="nome" required/>
-        </div>
 
     <div style={campoForm}>
         <label style={label}>Email</label>
@@ -64,23 +58,16 @@ function Cadastro(){
         <input style={inputar} type="password" id="password" required minlength="6"/>
     </div>
 
-    <div style={campoForm}>  
-    <label style={label}>Confirmar Senha</label>
-    <input style={inputar} type="password" id="confirm-password" required minlength="6"/>
-    </div> 
-         <div style={campoForm}>    
-        <label style={label}>Telefone (opcional)</label>
-        <input style={inputar} type="tel" id="phone"/>
-        </div>
-
-        <button type="submit" style={botao}>Cadastrar</button>
+        <button type="submit" style={botao}>Logar</button>
         <div class="link" style={link}>
-            <a href="#"><Link to="/login">Já tenho conta</Link></a> 
+            <a href="/cadastro">Criar conta</a>
         </div>
         </form>
         </div>
         </div>
+
+
 )
 
 }
-export default Cadastro;
+export default Login;
