@@ -5,7 +5,7 @@ function Menu(){
   //  backgroundColor: "cyan",
   display: "flex",
   height: "90px",
-  borderBottom: "5px solid cyan"
+  borderBottom: "5px solid #0480e6"
   }
 
   let rotas = {
