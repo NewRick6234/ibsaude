@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import Input from './componentes/Input'
-import Botao from './Botao';
+import Botao from './componentes/Botao';
 
 function CadastroUsuario(){
 
