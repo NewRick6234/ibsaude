@@ -4,6 +4,7 @@ import Cadastro from './Cadastro'
 import Login from './Login'
 import Menu from './Menu'
 import CadastroMedicamento from './CadastroMedicamento'
+import TelaDeRegistro from './TelaDeRegistro'
 import Remedios from './Remedios'
 
 
@@ -17,6 +18,8 @@ function App() {
       <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/menu" element={<Menu />}>
         <Route path="cadastroMedicamento" element={<CadastroMedicamento />} />
+        <Route path="TelaDeRegistro" element={<TelaDeRegistro />} />
+
       </Route>
     </Routes>
     </>

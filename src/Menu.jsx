@@ -5,7 +5,7 @@ function Menu(){
   //  backgroundColor: "cyan",
   display: "flex",
   height: "90px",
-  borderBottom: "5px solid cyan"
+  borderBottom: "5px solid #0480e6"
   }
 
   let rotas = {
@@ -39,7 +39,7 @@ return(
       <Link to='/logar'>Logar</Link>
     </li> */}
     <li style={rota}>
-      Entrada
+      <Link to='TelaDeRegistro'>Tela de Registro</Link>
       </li>
     <li style={rota}>
      Controle de Estoque
