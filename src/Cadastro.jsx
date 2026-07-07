@@ -1,86 +1,34 @@
-import { Link } from "react-router-dom"
+
+import Input from './componentes/Input'
+import Botao from './Botao';
 
 function Cadastro(){
 
-    let form = {
-        marginTop: "20px"
-    }
-    
-    let link = {
-        marginTop: "10px",
-        marginBottom: "10px",
-        color: "red"
-    }
-
-    let botao = {
-        border: "1px solid black",
-        backgroundColor: "rgba(229, 231, 235)"
-    }
-
-    let inputar = {
-        border: "1px solid black",
-        backgroundColor: "white",
-        height: "20px"
-    }
-
-    let campoForm = {
-        marginTop: "10px",
-        marginBottom: "10px"
-    }
-
-    let label = {
-        marginRight: "5px"
-    }
-    
-    let imagem = {
-        marginTop: "5px"
-     }
-
     return(
-        <div className="flex justify-center">
-        <div className="bg-blue-300 w-1/4 flex flex-col items-center">
-         <img style={imagem} src="/ib_saude.png" className="w-1/4" />
-        <p className="font-semibold">Bem vindo ao IBSaúde</p>  {/*descricao ou introducao */}
-
-        <p>______________</p>
-
-        <form className="flex flex-col items-center" style={form} method="post">
-        
-        {/* criar componente da área onde estará o label e o input */}
-
-        <div style={campoForm}>    
-        <label style={label}>Nome</label>
-        <input style={inputar} type="text" id="nome" required/>
-        </div>
-
-    <div style={campoForm}>
-        <label style={label}>Email</label>
-        <input style={inputar} type="email" id="email"  required/>
-    </div>
+        <>
+    <div className='flex flex-col gap-5 items-center h-full'>
+    <h1 className='text-3xlfont-bold tracking-tight text-gray-900 sm:text-3xl '>Cadastro de Medicamentos</h1>
+    <form className='flex flex-col gap-4 items-center h-full' method='post'>
+        <Input name="Nome do medicamento:"></Input>
+        <Input 
+            name="Classificação:" 
+            options={['Venda Livre', 'Antibiótico', 'Controlado (Receita Especial)', 'Uso Hospitalar']}
+        />
+        <Input name="Codigo interno e/ ou código oficial:" ></Input>
+        <Input name="Uso específico:" ></Input>
+        <Input 
+            name="Tipo:" 
+            options={['Comprimido', 'Cápsula', 'Drágea', 'Ampola', 'Frasco-ampola', 'Xarope', 'Suspensão', 'Pomada', 'Gel', 'Spray']}
+        />
+        <Input name="Fabricante:" ></Input>
+        <Input name="Lote:" ></Input>
+        <Input name="Data de validade:" tipo='date' ></Input>
     
-
-    <div style={campoForm}>   
-        <label style={label}>Senha</label>
-        <input style={inputar} type="password" id="password" required minlength="6"/>
+    <Botao></Botao>
+    </form>
     </div>
-
-    <div style={campoForm}>  
-    <label style={label}>Confirmar Senha</label>
-    <input style={inputar} type="password" id="confirm-password" required minlength="6"/>
-    </div> 
-         <div style={campoForm}>    
-        <label style={label}>Telefone (opcional)</label>
-        <input style={inputar} type="tel" id="phone"/>
-        </div>
-
-        <button type="submit" style={botao}>Cadastrar</button>
-        <div class="link" style={link}>
-            <a href="#"><Link to="/login">Já tenho conta</Link></a> 
-        </div>
-        </form>
-        </div>
-        </div>
-)
+    </>
+    )
 
 }
 export default Cadastro;
