@@ -4,6 +4,8 @@ import Cadastro from './Cadastro'
 import Login from './Login'
 import Menu from './Menu'
 import CadastroMedicamento from './CadastroMedicamento'
+import Remedios from './Remedios'
+
 
 function App() {
 
@@ -18,6 +20,8 @@ function App() {
       </Route>
     </Routes>
     </>
+
+
   )
 }
 
