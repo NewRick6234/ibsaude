@@ -5,6 +5,7 @@ import Login from './Login'
 import Menu from './Menu'
 import CadastroMedicamento from './CadastroMedicamento'
 import Remedios from './Remedios'
+import LoteMedicamento from './LoteMedicamento'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/menu" element={<Menu />}>
         <Route path="cadastroMedicamento" element={<CadastroMedicamento />} />
+        <Route path="LoteMedicamento" element={<LoteMedicamento />} />
       </Route>
     </Routes>
     </>
