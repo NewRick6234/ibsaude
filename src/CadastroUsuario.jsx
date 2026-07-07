@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom"
+import Input from './componentes/Input'
+import Botao from './Botao';
 
-function Cadastro(){
+function CadastroUsuario(){
 
-    let form = {
+    
+ let form = {
         marginTop: "20px"
     }
     
@@ -80,5 +83,7 @@ function Cadastro(){
         </form>
         </div>
         </div>
-)
+    )
+
 }
+export default CadastroUsuario;
