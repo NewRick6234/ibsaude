@@ -1,34 +1,24 @@
-import { useState } from 'react'
-import { Link, Route, Routes } from 'react-router-dom'
+import TelaInicial from './TelaInicial'
+import { Route, Routes } from 'react-router-dom'
 import Cadastro from './Cadastro'
+import Login from './Login'
+import Menu from './Menu'
+import CadastroMedicamento from './CadastroMedicamento'
 import Remedios from './Remedios'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <> 
-
-<ul>
-    <li>
-      <Link to='/cadastro'>Cadastrar</Link>
-    </li>
-    <li>
-    <Link to='/Remedios'>Remédio</Link>
-    </li>
-</ul>
-
-   
-
     <Routes>
-      <Route path='cadastro' element={<Cadastro/>}> Cadastrar</Route>
-      <Route path='Remedios' element={<Remedios/>}>remedios</Route>
-      
+      <Route path="/" element={<TelaInicial />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/cadastro" element={<Cadastro />} />
+      <Route path="/menu" element={<Menu />}>
+        <Route path="cadastroMedicamento" element={<CadastroMedicamento />} />
+      </Route>
     </Routes>
-
-
-   
     </>
 
 

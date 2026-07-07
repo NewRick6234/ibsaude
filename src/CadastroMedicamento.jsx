@@ -2,7 +2,7 @@
 import Input from './componentes/Input'
 import Botao from './Botao';
 
-function Cadastro(){
+function CadastroMedicamento(){
 
     return(
         <>
@@ -31,4 +31,4 @@ function Cadastro(){
     )
 
 }
-export default Cadastro;
+export default CadastroMedicamento;
