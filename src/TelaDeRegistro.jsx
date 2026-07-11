@@ -23,35 +23,14 @@ function TelaDeRegistro(){
     }
     setTabela((prevTabela) => [...prevTabela, objeto]);
   }
-
-
-        
-    return(
+        return(
         <>
         <div className='flex gap-4'>
          <div className='flex flex-col gap-5 items-center h-full'>
         <h1 className='text-3xlfont-bold tracking-tight text-gray-900 sm:text-3xl '>Registro da Compra:</h1>
         <form className='flex flex-col gap-4 items-center h-full' method='post'>
 
-                <Input name="Nome do Medicamento:"
-                        value={nome}
-                        onChange ={(e) => setNome(e.target.value)}
-                >
-                        
-                </Input>
 
-                <Input name="Quantidade Adquirida:"
-                        type="number"
-                        value={quantidade}
-                        onChange ={(e) => setQuantidade(e.target.value)}
-                />
-                <Input name="Valor Unitário:"
-                        type="number"
-                        value={preco}
-                        onChange = { (e) => setPreco(e.target.value)}
-                />
-                
-                <p> Total: {quantidade * preco}</p>
                 <Input name="Data da Entrada:"
                         type="date"
                 >
@@ -66,20 +45,6 @@ function TelaDeRegistro(){
                         name="Classificação:" 
                         ptions={['Venda Livre', 'Antibiótico', 'Controlado (Receita Especial)', 'Uso Hospitalar']}
                 />
-                <Input name="Codigo interno e/ ou código oficial:" 
-                        value={codigo}
-                        onChange ={(e) => setCodigo(e.target.value)}
-
-                />
-                
-                <Input name="Uso específico:" ></Input>
-                <Input  
-                        id="tipo-select"
-                        value={tipo} 
-                        onChange={(e) => setTipo(e.target.value)}
-                        name="Tipo:" 
-                        options={['Comprimido', 'Cápsula', 'Drágea', 'Ampola', 'Frasco-ampola', 'Xarope', 'Suspensão', 'Pomada', 'Gel', 'Spray']}
-                        />
                 
                 <Input name="Numero da Nota Fiscal:"
                 
@@ -101,10 +66,10 @@ function TelaDeRegistro(){
         </div>
         <div className='w-full'>
 
-        <table className="border-separate border-spacing-y-3 w-full">
+        <table className="border-2 w-full">
         <thead>
-          <tr className='border-4 h-20'>
-                <th className='pr-20 border'><Input name="Codigo interno e/ ou código oficial:" 
+          <tr className='border-2 h-10'>
+                <th><Input name="Codigo interno e/ ou código oficial:" 
                         value={codigo}
                         onChange ={(e) => setCodigo(e.target.value)}
 
@@ -147,7 +112,7 @@ function TelaDeRegistro(){
         <tbody>
           {tabela.map(
             (linha) => (
-              <tr className='border' key={linha.id}>
+              <tr className='border h-10' key={linha.id}>
                 <td className='border text-center'>{linha.codigo}</td>
                 <td className='border text-center'>{linha.nome}</td>
                 <td className='border text-center'>{linha.tipo}</td>
