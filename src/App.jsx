@@ -5,6 +5,7 @@ import Menu from './Menu'
 import CadastroMedicamento from './CadastroMedicamento'
 import Remedios from './Remedios'
 import CadastroUsuario from './CadastroUsuario'
+import ViewRemedios from './viewRemedios'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="/cadastro" element={<CadastroUsuario />} />
       <Route path="/menu" element={<Menu />}>
         <Route path="cadastroMedicamento" element={<CadastroMedicamento />} />
+        <Route path='verRemedios' element={<ViewRemedios/>}/>
       </Route>
     </Routes>
     </>
