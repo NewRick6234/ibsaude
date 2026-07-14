@@ -57,7 +57,7 @@ return(
       )}
     </li>
     <li style={rota}>
-      Entrada
+      <Link to='TelaDeRegistro'>Tela de Registro</Link>
       </li>
     <li style={rota}>
      Controle de Estoque
