@@ -7,7 +7,7 @@ import TelaDeRegistro from './TelaDeRegistro'
 import Remedios from './Remedios'
 import LoteMedicamento from './LoteMedicamento'
 import CadastroUsuario from './CadastroUsuario'
-import ViewRemedios from './viewRemedios'
+import ViewRemedios from './ViewRemedios'
 import ViewLote from './ViewLote'
 
 
