@@ -52,7 +52,7 @@ return(
         <Link to='verRemedios'>Medicamentos</Link>
         </li>
         <li>
-          Lote de Medicamentos
+          <Link to="verLote">Lote de Medicamentos</Link>
           </li></ul>
       )}
     </li>

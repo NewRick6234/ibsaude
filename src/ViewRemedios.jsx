@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 function ViewRemedios(){
 
     // count[setTabela, tabela] = useState([
@@ -19,29 +21,8 @@ function ViewRemedios(){
         borderBottom: "1px solid black",
     }
 
-    const remedios = [
-     {
-      nome: 'Dipirona',
-      classificacao: 'Analgésico',
-      codigoInterno: 'MED-001',
-      codigoOficial: 'DB-100',
-      usoEspecifico: 'Alívio de dor e febre'
-    },
-    {
-      nome: 'Paracetamol',
-      classificacao: 'Analgésico',
-      codigoInterno: 'MED-002',
-      codigoOficial: 'PC-200',
-      usoEspecifico: 'Controle de febre'
-    },
-    {
-      nome: 'Amoxicilina',
-      classificacao: 'Antibiótico',
-      codigoInterno: 'MED-003',
-      codigoOficial: 'AMX-300',
-      usoEspecifico: 'Tratamento de infecções'
-    }
-]
+    const [remedios, setRemedios] = useState()
+
 return(
 <>
     <h1 style={titulo}>Tabela de Medicamentos</h1>
