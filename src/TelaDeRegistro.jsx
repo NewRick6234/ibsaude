@@ -14,15 +14,15 @@ function TelaDeRegistro(){
 
         const acaoBotaoAdicionar = () => {
         
-    let objeto =  {
-      id: contador++,
-      codigo: codigo,
-      nome: nome,
-      tipo:tipo,
-      classe:classific,
-      quantidade:quantidade,
-      preco:preco
-    }
+                let objeto =  {
+                id: contador++,
+                codigo: codigo,
+                nome: nome,
+                tipo:tipo,
+                classe:classific,
+                quantidade:quantidade,
+                preco:preco
+                }
     setTabela((prevTabela) => [...prevTabela, objeto]);
   }
         return(
