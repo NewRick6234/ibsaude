@@ -1,8 +1,10 @@
- export default function Input({ name, tipo = "text", options, ...props }) {
+
+
+ export default function Input({ name, tipo = "text", options,children ,...props }) {
   return (
     <div className="w-full m-4"> 
       <label className="block text-sm font-medium text-gray-700 text-left">
-        {name}
+        {children}
       </label>
       
       <div className="mt-2">

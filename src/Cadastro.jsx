@@ -15,14 +15,9 @@ function Cadastro(){
             options={['Venda Livre', 'Antibiótico', 'Controlado (Receita Especial)', 'Uso Hospitalar']}
         />
         <Input name="Codigo interno e/ ou código oficial:" ></Input>
-        <Input name="Uso específico:" ></Input>
-        <Input 
-            name="Tipo:" 
-            options={['Comprimido', 'Cápsula', 'Drágea', 'Ampola', 'Frasco-ampola', 'Xarope', 'Suspensão', 'Pomada', 'Gel', 'Spray']}
-        />
-        <Input name="Fabricante:" ></Input>
-        <Input name="Lote:" ></Input>
-        <Input name="Data de validade:" tipo='date' ></Input>
+        
+        
+       
     
     <Botao></Botao>
     </form>
