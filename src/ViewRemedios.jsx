@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function ViewRemedios(){
 
@@ -21,7 +21,21 @@ function ViewRemedios(){
         borderBottom: "1px solid black",
     }
 
-    const [remedios, setRemedios] = useState()
+    const [remedios, setRemedios] = useState([])
+
+    useEffect(
+        () => {
+            async function buscarDados(){
+                const resposta = await fetch('http://localhost:5173/remedios.json')
+                const dados = await resposta.json()
+                setRemedios(dados)
+                console.log(dados)
+            }     
+            buscarDados()
+        }
+    , [])
+
+    
 
 return(
 <>
