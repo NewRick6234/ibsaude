@@ -1,6 +1,10 @@
 import { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
+import imagens from "./imagens/ib_saude.png"
+
 function Menu(){
+
+
 
   const[cadastro, setCadastro] = useState(false)
   const[ver, setVer] = useState(false)
@@ -33,7 +37,7 @@ function Menu(){
 return(
     <>
 <div style={rodape}>
-<img style={imagem} src='/ib_saude.png'/>
+<img style={imagem} src={imagens}/>
 
 <ul style={rotas}>
     <li style={rota}>
