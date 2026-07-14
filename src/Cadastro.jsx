@@ -1,8 +1,8 @@
 
 import Input from './componentes/Input'
-import Botao from './componentes/Botao';
+import Botao from './Botao';
 
-function CadastroMedicamento(){
+function Cadastro(){
 
     return(
         <>
@@ -15,7 +15,8 @@ function CadastroMedicamento(){
             options={['Venda Livre', 'Antibiótico', 'Controlado (Receita Especial)', 'Uso Hospitalar']}
         />
         <Input name="Codigo interno e/ ou código oficial:" ></Input>
-        <Input name="Uso específico:" ></Input>
+        
+        
        
     
     <Botao></Botao>
@@ -25,4 +26,4 @@ function CadastroMedicamento(){
     )
 
 }
-export default CadastroMedicamento;
+export default Cadastro;
