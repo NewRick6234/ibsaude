@@ -1,5 +1,5 @@
 import Input from "../Input";
-import Botao from './Botao';
+import Botao from './componentes/Botao';
 import back from "./imagens/medicamento.webp"
 function Remedios(){
 let fundo= {backgroundImage:`url(${back})`}

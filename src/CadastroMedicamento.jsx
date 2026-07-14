@@ -1,6 +1,6 @@
 
 import Input from './componentes/Input'
-import Botao from './Botao';
+import Botao from './componentes/Botao';
 
 function CadastroMedicamento(){
 
