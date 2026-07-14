@@ -7,6 +7,7 @@ function TelaDeRegistro(){
         const [codigo, setCodigo] = useState('')
         const [nome, setNome] = useState('')
         const [tipo, setTipo] = useState('comprimido')
+        const [classific, setClasse] = useState('Venda Livre')
         const [quantidade, setQuantidade] = useState(0)
         const [preco, setPreco] = useState(0)
         
@@ -18,6 +19,7 @@ function TelaDeRegistro(){
       codigo: codigo,
       nome: nome,
       tipo:tipo,
+      classe:classific,
       quantidade:quantidade,
       preco:preco
     }
@@ -41,10 +43,7 @@ function TelaDeRegistro(){
                         
                 </Input>
 
-                <Input 
-                        name="Classificação:" 
-                        ptions={['Venda Livre', 'Antibiótico', 'Controlado (Receita Especial)', 'Uso Hospitalar']}
-                />
+               
                 
                 <Input name="Numero da Nota Fiscal:"
                 
@@ -91,6 +90,17 @@ function TelaDeRegistro(){
                         options={['Comprimido', 'Cápsula', 'Drágea', 'Ampola', 'Frasco-ampola', 'Xarope', 'Suspensão', 'Pomada', 'Gel', 'Spray']}
                         />
                 </th>
+                <th>
+                         <Input 
+                        id="classe-select"
+                        value={classific} 
+                        onChange={(e) => setClasse(e.target.value)}
+                        name="Classificacao:" 
+                        options={['Venda Livre', 'Antibiótico', 'Controlado (Receita Especial)', 'Uso Hospitalar']}
+                />
+
+
+                </th>
 
                 <th><Input name="Quantidade Adquirida:"
                         type="number"
@@ -116,6 +126,7 @@ function TelaDeRegistro(){
                 <td className='border text-center'>{linha.codigo}</td>
                 <td className='border text-center'>{linha.nome}</td>
                 <td className='border text-center'>{linha.tipo}</td>
+                <td className='border text-center'>{linha.classe}</td>
                 <td className='border text-center'>{linha.quantidade}</td>
                 <td className='border text-center'>{linha.preco}</td>
                 <td className='border text-center'><p> Total: {linha.quantidade * linha.preco}</p></td>
