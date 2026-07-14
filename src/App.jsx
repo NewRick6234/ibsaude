@@ -6,6 +6,8 @@ import CadastroMedicamento from './CadastroMedicamento'
 import TelaDeRegistro from './TelaDeRegistro'
 import Remedios from './Remedios'
 import CadastroUsuario from './CadastroUsuario'
+import ViewRemedios from './viewRemedios'
+import ViewLote from './ViewLote'
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
         <Route path="cadastroMedicamento" element={<CadastroMedicamento />} />
         <Route path="TelaDeRegistro" element={<TelaDeRegistro />} />
 
+        <Route path='verRemedios' element={<ViewRemedios/>}/>
+        <Route path='verLote' element={<ViewLote/>}/>
       </Route>
     </Routes>
     </>
