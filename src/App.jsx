@@ -5,7 +5,7 @@ import Menu from './Menu'
 import CadastroMedicamento from './CadastroMedicamento'
 import Remedios from './Remedios'
 import CadastroUsuario from './CadastroUsuario'
-import ViewRemedios from './viewRemedios'
+import ViewRemedios from './ViewRemedios'
 import ViewLote from './ViewLote'
 
 
