@@ -10,7 +10,7 @@ function LoteMedicamento() {
         <Input name="Apresentacao" options={['Comprimido', 'Cápsula', 'Drágea', 'Ampola', 'Frasco-ampola', 'Xarope', 'Suspensão', 'Pomada', 'Gel', 'Spray']}>Apresentação</Input>
         
         <Input name="Fabricante" options={['EMS', 'Biolab','Medley','Teuto','Neo Química']}>Fabricante</Input>
-        <Input name="Lote" options={['4H5210','3K1045','5A8762', ' BL240815A','24A5678',' BLA250301',' C123456',]}>Lote</Input>
+        <Input name="Lote" >Lote</Input>
         <Input type="date" name="Data de validade">Data de validade</Input>
 
 
