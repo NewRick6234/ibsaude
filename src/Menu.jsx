@@ -45,7 +45,7 @@ return(
       {cadastro && (
       <ul>
         <li><Link to='cadastroMedicamento'>Cadastro de Medicamentos</Link></li>
-        <li>Cadastro do Lote de Medicamentos</li>
+        <li><Link to="LoteMedicamentos">Cadastrar Lote de Medicamentos</Link></li>
       </ul>
       )}
     </li>
