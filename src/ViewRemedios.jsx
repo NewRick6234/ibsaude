@@ -26,7 +26,7 @@ function ViewRemedios(){
     useEffect(
         () => {
             async function buscarDados(){
-                const resposta = await fetch('http://localhost:5173/remedios.json')
+                const resposta = await fetch('/remedios.json')
                 const dados = await resposta.json()
                 setRemedios(dados)
                 console.log(dados)
