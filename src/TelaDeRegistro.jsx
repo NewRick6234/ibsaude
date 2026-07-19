@@ -42,9 +42,9 @@ function TelaDeRegistro(){
   }
         return(
         <>
+        <h1 className='text-3xlfont-bold tracking-tight text-gray-900 sm:text-3xl '>Registro da Compra:</h1>
         <div className='flex gap-4'>
          <div className='flex flex-col gap-5 items-center h-full'>
-        <h1 className='text-3xlfont-bold tracking-tight text-gray-900 sm:text-3xl '>Registro da Compra:</h1>
         <form className='flex flex-col gap-4 items-center h-full' method='post'>
 
 
@@ -80,9 +80,9 @@ function TelaDeRegistro(){
         </div>
         <div className='w-full'>
 
-        <table className="border-2 w-full">
+        <table className="gap-2 w-full">
         <thead>
-          <tr className='border-2 h-10'>
+          <tr className='border-2 h-20'>
                 <th><Input name="Codigo interno e/ ou código oficial:" 
                         value={codigo}
                         onChange ={(e) => setCodigo(e.target.value)}
@@ -105,6 +105,12 @@ function TelaDeRegistro(){
                         options={remedios.map(r => r.nome)}
                         
                 />
+                </th>
+                <th><Input name="Uso:" 
+                        value={tipo}
+                        onChange ={(e) => setTipo(e.target.value)}
+
+                /> 
                 </th>
 
                  
