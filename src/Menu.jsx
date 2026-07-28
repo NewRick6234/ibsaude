@@ -69,7 +69,9 @@ return(
      <Link to='ControleDeEstoque'>Controle de Estoque</Link>
       </li>
     <li style={rota}>
+      <Link to="DistribuicaoUnidade">
       Distribuição para unidades
+      </Link>
       </li>
     <li style={rota}>
       Rastreabilidade 

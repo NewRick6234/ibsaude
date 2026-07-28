@@ -1,10 +1,22 @@
+import Botao from "./componentes/Botao"
+import Input from "./componentes/Input"
+import imagens from "./imagens/ib_saude.png"
 function DistribuicaoUnidade(){
+
+     let imagem = {
+        marginTop: "5px"
+     }
+
+      let form = {
+        marginTop: "20px"
+    }
+    
 
 return(
 <>
  <div className="flex justify-center">
         <div className="bg-blue-300 w-1/4 flex flex-col items-center">
-         <img style={imagem} src="/ib_saude.png" className="w-1/4" />
+         <img style={imagem} src={imagens} className="w-1/4" />
         <p className="font-semibold">Bem vindo ao IBSaúde</p>  {/*descricao ou introducao */}
 
         <p>______________</p>
@@ -13,35 +25,22 @@ return(
         
         {/* criar componente da área onde estará o label e o input */}
 
-        <div style={campoForm}>    
-        <label style={label}></label>
-        <input style={inputar} type="text" id="nome" required/>
-        </div>
+        <Input>Unidade de Destino</Input>
 
-    <div style={campoForm}>
-        <label style={label}>Email</label>
-        <input style={inputar} type="email" id="email"  required/>
-    </div>
-    
+        <Input type="number">Quantidade</Input>
 
-    <div style={campoForm}>   
-        <label style={label}>Senha</label>
-        <input style={inputar} type="password" id="password" required minlength="6"/>
-    </div>
+        <Input type="date">Data de Envio</Input>
 
-    <div style={campoForm}>  
-    <label style={label}>Confirmar Senha</label>
-    <input style={inputar} type="password" id="confirm-password" required minlength="6"/>
-    </div> 
-         <div style={campoForm}>    
-        <label style={label}>Telefone (opcional)</label>
-        <input style={inputar} type="tel" id="phone"/>
-        </div>
+        <Input>Responsável pela Liberação</Input>
 
-        <button type="submit" style={botao}>Cadastrar</button>
-        <div class="link" style={link}>
-            <a href="#"><Link to="/login">Já tenho conta</Link></a> 
-        </div>
+        <Input>Responsável pelo Recebimento</Input>
+
+        <Input type="file">Anexação do Pedido Formal</Input>
+
+        <Input type="number">Valor de saída</Input>
+
+        <Botao>Enviar</Botao>
+
         </form>
         </div>
         </div>

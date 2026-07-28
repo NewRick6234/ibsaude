@@ -1,9 +1,19 @@
-import Input from "../Input"
-import Botao from "./Botao"
+import { useState } from "react"
+import Botao from "./componentes/Botao"
+import Input from "./componentes/Input"
 import imagens from "./imagens/ib_saude.png"
+
+
 function CadastroUnidadeSaude(){
 
-    let lista = ["1","2"]
+
+    const[nomeSaude, setNomeSaude] = useState('')
+    const [codigo, setCodigo] = useState('')
+    const [endereco, setCodigo] = useState('')
+    const [contato, setContato] = useState('')
+    const [email, setEmail] = useState('') 
+    const [telefone, setTelefone] = useState(0)
+  
  let form = {
         marginTop: "20px"
     }
@@ -54,31 +64,30 @@ function CadastroUnidadeSaude(){
                 >Nome da Unidade
 
                 </Input>
-                <Input name="Código:">
+                <Input name="Codigo:">
                  Código
                 </Input>
 
                
                 
-                <Input name="Endereço:"                         options={['Comprimido', 'Cápsula', 'Drágea', 'Ampola', 'Frasco-ampola', 'Xarope', 'Suspensão', 'Pomada', 'Gel', 'Spray']}
->
-                    Endereço
+                <Input name="Endereco:" >
+                Endereço                      
                 </Input>
                
                 
-                <Input name="Contato/responsável:">
-                    Contato/responsavel
+                <Input name="Contato/responsavel:">
+                    Contato/responsável
                 </Input>
 
-                <Input name="tele" options={lista}>
-                tele
+                <Input name="email" type="email">
+                e-mail
                 </Input>
 
-                <Botao></Botao>
+                <Botao>Cadastrar</Botao>
         
-        <div className="link" style={link}>
+        {/* <div className="link" style={link}>
              <a href="#">Já tenho conta</a>
-        </div>
+        </div> */}
         </form>
         </div>
         </div>
