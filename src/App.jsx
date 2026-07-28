@@ -11,6 +11,7 @@ import ViewRemedios from './ViewRemedios'
 import ViewLote from './ViewLote'
 import CadastroUnidadeSaude from './CadastroUnidadeSaude'
 
+import ControleDeEstoque from './ControleDeEstoque'
 
 function App() {
 
@@ -23,9 +24,10 @@ function App() {
       <Route path="/menu" element={<Menu />}>
         <Route path="cadastroMedicamento" element={<CadastroMedicamento />} />
         <Route path="cadastroSaude" element={<CadastroUnidadeSaude />} />
+        <Route path="LoteMedicamentos" element={<LoteMedicamento />} />
         <Route path="TelaDeRegistro" element={<TelaDeRegistro />} />
-
-        <Route path="LoteMedicamento" element={<LoteMedicamento />} />
+        <Route path="ControleDeEstoque" element={<ControleDeEstoque />} />
+      
         <Route path='verRemedios' element={<ViewRemedios/>}/>
         <Route path='verLote' element={<ViewLote/>}/>
       </Route>
