@@ -4,20 +4,57 @@
     "classificacao": "Analgésico",
     "codigoInterno": "MED-001",
     "codigoOficial": "DB-100",
-    "usoEspecifico": "Alívio de dor e febre"
+    "usoEspecifico": "Alívio de dor e febre",
+    "controlePorLote": "Lote 12345",
+    "controlePorValidade": "2026-09-31",
+    "saldoAtual": 14
+    
+
   },
   {
     "nome": "Paracetamol",
     "classificacao": "Analgésico",
     "codigoInterno": "MED-002",
     "codigoOficial": "PC-200",
-    "usoEspecifico": "Controle de febre"
+    "usoEspecifico": "Controle de febre",
+    "controlePorLote": "Lote 67890",
+    "controlePorValidade": "2026-08-30",
+    "saldoAtual": 4
+    
   },
   {
     "nome": "Amoxicilina",
     "classificacao": "Antibiótico",
     "codigoInterno": "MED-003",
     "codigoOficial": "AMX-300",
-    "usoEspecifico": "Tratamento de infecções"
+    "usoEspecifico": "Tratamento de infecções",
+    "controlePorLote": "Lote 11111",
+    "controlePorValidade": "2027-03-15",
+    "saldoAtual": 200
+    
+  },
+  {
+  "nome": "Ibuprofeno",
+    "classificacao": "Anti-inflamatório",
+    "codigoInterno": "MED-004",
+    "codigoOficial": "IBU-400",
+    "usoEspecifico": "Alívio de dor e inflamação",
+    "controlePorLote": "Lote 22222",
+    "controlePorValidade": "2026-12-31",
+    "saldoAtual": 0
+   
+  },
+  {
+    "nome": "Omeprazol",
+    "classificacao": "Inibidor da bomba de prótons",
+    "codigoInterno": "MED-005",
+    "codigoOficial": "OME-500",
+    "usoEspecifico": "Tratamento de úlceras e refluxo gástrico",
+    "controlePorLote": "Lote 33333",
+    "controlePorValidade": "2027-06-30",
+    "saldoAtual": 120
+    
   }
+
+  
 ]
