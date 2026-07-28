@@ -64,7 +64,8 @@ return(
       <Link to='TelaDeRegistro'>Tela de Registro</Link>
       </li>
     <li style={rota}>
-     Controle de Estoque
+    
+     <Link to='ControleDeEstoque'>Controle de Estoque</Link>
       </li>
     <li style={rota}>
       Distribuição para unidades
