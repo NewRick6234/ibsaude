@@ -46,6 +46,7 @@ return(
       <ul>
         <li><Link to='cadastroMedicamento'>Cadastro de Medicamentos</Link></li>
         <li>Cadastro do Lote de Medicamentos</li>
+        <li><Link to='cadastroSaude'>Unidade de Saude</Link></li>
       </ul>
       )}
     </li>

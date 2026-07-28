@@ -9,6 +9,7 @@ import LoteMedicamento from './LoteMedicamento'
 import CadastroUsuario from './CadastroUsuario'
 import ViewRemedios from './ViewRemedios'
 import ViewLote from './ViewLote'
+import CadastroUnidadeSaude from './CadastroUnidadeSaude'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path="/cadastro" element={<CadastroUsuario />} />
       <Route path="/menu" element={<Menu />}>
         <Route path="cadastroMedicamento" element={<CadastroMedicamento />} />
+        <Route path="cadastroSaude" element={<CadastroUnidadeSaude />} />
         <Route path="TelaDeRegistro" element={<TelaDeRegistro />} />
 
         <Route path="LoteMedicamento" element={<LoteMedicamento />} />
