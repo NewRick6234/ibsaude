@@ -21,7 +21,7 @@ function TelaInicial(){
        <button style={botao}><Link to='/login'>Logar</Link></button>
        <button style={botao}><Link to='/cadastro'>Cadastrar</Link></button>
         <button style={botao}><Link to="/menu">Entrar no Menu</Link></button>
-        <button stuyle={botao}><Link to="/menu/LoteMedicamento">Cadastrar Lote de Medicamento</Link></button>
+        <button style={botao}><Link to="/menu/LoteMedicamento">Cadastrar Lote de Medicamento</Link></button>
         </div>
         </>
     )
