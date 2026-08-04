@@ -86,7 +86,7 @@ return (
 
 <br></br>
 
-<p>Quantidade</p>
+<p>Status do Estoque</p>
 
     🟢 Verde → quantidade maior que 10.
 🟠 Laranja → quantidade entre 1 e 10.
