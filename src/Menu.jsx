@@ -61,7 +61,15 @@ return(
       )}
     </li>
     <li style={rota}>
-      <Link to='TelaDeRegistro'>Tela de Registro</Link>
+      <span onClick={() => setVer(!ver)}>Registro</span>
+      {ver && (
+      <ul><li>
+        <Link to='TelaDeRegistro'>Tela De Cadastro</Link>
+        </li>
+        <li>
+          <Link to="ViewRegistro">Visualizar Registro</Link>
+          </li></ul>
+      )}
       </li>
     <li style={rota}>
     
