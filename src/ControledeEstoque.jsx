@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react"
 
-function ControledeEstoque() {
+function ControleDeEstoque() {
     let titulo = {
         fontSize: "25px",
         fontWeight: "bold",
@@ -111,4 +111,4 @@ return (
 
 
 
-    export default ControledeEstoque;
+    export default ControleDeEstoque;

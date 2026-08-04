@@ -9,7 +9,8 @@ import LoteMedicamento from './LoteMedicamento'
 import CadastroUsuario from './CadastroUsuario'
 import ViewRemedios from './ViewRemedios'
 import ViewLote from './ViewLote'
-import ControleDeEstoque from './ControleDeEstoque'
+import ControleDeEstoque from './ControledeEstoque'
+import viewRegistro from './viewRegistro'
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
         <Route path="LoteMedicamentos" element={<LoteMedicamento />} />
         <Route path="TelaDeRegistro" element={<TelaDeRegistro />} />
         <Route path="ControleDeEstoque" element={<ControleDeEstoque />} />
-      
+        <Route path="ViewRegistro" element={<viewRegistro/>}/>
         <Route path='verRemedios' element={<ViewRemedios/>}/>
         <Route path='verLote' element={<ViewLote/>}/>
       </Route>
