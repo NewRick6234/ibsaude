@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import Botao from "./componentes/Botao"
 import Input from "./componentes/Input"
 import imagens from "./imagens/ib_saude.png"
@@ -11,7 +12,57 @@ function DistribuicaoUnidade(){
         marginTop: "20px"
     }
     
+    let tabela = {
+        marginTop: "40px",
+        border: "1px solid black"
+    }
 
+    let linhaTabela = {
+        borderBottom: "1px solid black",
+    }
+
+    const [unidadesSaude, setUnidadesSaude] = useState([])
+
+    const [tabela, setTabela]  = useState([])
+        const [codigo, setCodigo] = useState('')
+        const [nome, setNome] = useState('')
+        const [tipo, setTipo] = useState('comprimido')
+        const [classific, setClasse] = useState('Venda Livre')
+        const [quantidade, setQuantidade] = useState(0)
+        const [preco, setPreco] = useState(0)
+
+
+     
+//const MostrarTabela = () => {
+        useEffect(
+            () => {
+                async function buscarDados(){
+                    const resposta = await fetch('/unidadeSaude.json')
+                    const dados = await resposta.json()
+                    setUnidadesSaude(dados)
+                    console.log(dados)
+                }     
+                buscarDados()
+            }
+        , [])
+
+const acaoBotaoAdicionar = (event) => {
+event.preventDefault()
+
+
+        let objeto =  {
+      id: contador++,
+      codigo: codigo,
+      nome: nome,
+      tipo:tipo,
+      classe:classific,
+      quantidade:quantidade,
+      preco:preco
+    }
+
+        setTabela((prevTabela) => [...prevTabela, objeto]);
+          }
+//}
 return(
 <>
  <div className="flex justify-center">
@@ -44,6 +95,33 @@ return(
         </form>
         </div>
         </div>
+
+        <table style={tabela} className="w-full" border="1" cellPadding="8" cellSpacing="0">
+      <thead>
+        <tr style={linhaTabela}>
+          <th>Unidade Destino</th>
+          <th>Quantidade</th>
+          <th>Data de Envio</th>
+          <th>Responsável pela Liberação</th>
+          <th>Responsável pelo Recebimento</th>
+          <th>Anexação do Pedido Formal</th>
+          <th>Valor de Saída</th>
+        </tr>
+      </thead>
+      <tbody>
+        {unidadesSaude.map((unidadeSaude, index) => (
+          <tr style={linhaTabela} key={index}>
+            <td className="text-center">{unidadeSaude.unidadeDestino}</td>
+            <td className="text-center">{unidadeSaude.quantidade}</td>
+            <td className="text-center">{unidadeSaude.dataEnvio}</td>
+            <td className="text-center">{unidadeSaude.responsavelLiberacao}</td>
+            <td className="text-center">{unidadeSaude.responsavelRecebimento}</td>
+            <td className="text-center">{unidadeSaude.anexacaoPedidoFormal}</td>
+            <td className="text-center">{unidadeSaude.valorSaida}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
 
 </>
 )

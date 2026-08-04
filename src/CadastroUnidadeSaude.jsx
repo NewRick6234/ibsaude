@@ -9,7 +9,7 @@ function CadastroUnidadeSaude(){
 
     const[nomeSaude, setNomeSaude] = useState('')
     const [codigo, setCodigo] = useState('')
-    const [endereco, setCodigo] = useState('')
+    const [endereco, setEndereco] = useState('')
     const [contato, setContato] = useState('')
     const [email, setEmail] = useState('') 
     const [telefone, setTelefone] = useState(0)
