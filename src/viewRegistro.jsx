@@ -4,6 +4,7 @@ import { useState } from 'react'
 let contador=0
 function viewRegistro(){
     return(<>
+        
     
     
     </>)
