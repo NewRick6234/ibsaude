@@ -35,7 +35,7 @@ function ViewRegistro(){
         </div>
 
         <div className='bg-surface-container-lowest border border-outline-variant rounded-lg p-6 mb-8 flex items-center justify-between gap-110'>
-            <div className='h-30 flex flex-col justify-center '>
+            <div className='h-30 m-40 '>
                 <h1><strong>Anexos(PDF/XML)</strong></h1>
                 <p className='text-sm'>NFE_000987654_PharmaCorp.pdf, XML_NFE_000987654.xml</p>
             </div>
@@ -44,12 +44,11 @@ function ViewRegistro(){
             </div>
         </div>
         <div>
-            <table className='w-full text-left border-collapse '>
-                <thead>
+            <table className='w-full text-left border border-collapse '>
+                <thead className='border-b-2'>
                     <tr classNames='border-b border-outline-variant'>
-                        <th>CODIGO INTERNO/OFICIAL</th>
+                        <th className='uppercase p-table-cell text-left p-5'>CODIGO INTERNO/OFICIAL</th>
                         <th className='uppercase p-table-cell text-left p-5'>Nome do Medicamento</th>
-                        <th className='uppercase p-table-cell text-left p-5'>Uso</th>
                         <th className='uppercase p-table-cell text-left p-5'>Uso</th>
                         <th className='uppercase p-table-cell text-left p-5'>Qtd Adquirida</th>
                         <th className='uppercase p-table-cell text-left p-5'>Valor Unitário (R$)</th>
@@ -58,13 +57,20 @@ function ViewRegistro(){
                 </thead>
                 <tbody>
                     <tr className='border-b border-outline-variant'>
-                        <td className='p-table-cell'>MED-012</td>
-                        <td className='p-table-cell'>Fluoxetina</td>
-                        <td className='p-table-cell'>Antidepressivo</td>
-                        <td className='p-table-cell'>03</td>
-                        <td className='p-table-cell'>2,00</td>
-                        <td className='p-table-cell'>3,00</td>
-                        <td className='p-table-cell'>6,00</td>
+                        <td className='p-table-cell text-left p-5'>MED-012</td>
+                        <td className='p-table-cell text-left p-5'>Fluoxetina</td>
+                        <td className='p-table-cell text-left p-5'>Antidepressivo</td>
+                        <td className='p-table-cell text-left p-5'>2,00</td>
+                        <td className='p-table-cell text-left p-5'>3,00</td>
+                        <td className='p-table-cell text-left p-5'>6,00</td>
+                    </tr>
+                    <tr className='border-b border-outline-variant'>
+                        <td className='p-table-cell text-left p-5'>MED-012</td>
+                        <td className='p-table-cell text-left p-5'>Fluoxetina</td>
+                        <td className='p-table-cell text-left p-5'>Antidepressivo</td>
+                        <td className='p-table-cell text-left p-5'>2,00</td>
+                        <td className='p-table-cell text-left p-5'>3,00</td>
+                        <td className='p-table-cell text-left p-5'>6,00</td>
                     </tr>
                 </tbody>
             </table>
