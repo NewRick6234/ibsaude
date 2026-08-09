@@ -1,6 +1,7 @@
 import Input from './componentes/Input'
 import Botao from './Botao'
 import { useState } from 'react'
+import imagem from './imagens/att.png'
 function ViewRegistro(){
     return(<>
     <div className='flex flex-col items-center gap-40'>
@@ -37,7 +38,7 @@ function ViewRegistro(){
         <div className='bg-surface-container-lowest border border-outline-variant rounded-lg p-6 mb-8 flex items-center justify-between gap-110'>
             <div className='h-30 w-100 flex items-center gap-3'>
                 <div className='p-4'>
-                    <img src="" alt="imagem" />
+                    <img className='h-20 p-2' src={imagem} alt="imagem" />
                 </div>
                 <div>
                     <h1 className='text-sm'><strong>Anexos(PDF/XML)</strong></h1>
@@ -45,12 +46,12 @@ function ViewRegistro(){
                 </div>
             </div>
             <div>
-                <a href="">Visualizar arquivo</a>
+                <a className='p-4' href="">Visualizar arquivo</a>
             </div>
         </div>
         <div>
-            <table className='w-full text-left border border-collapse '>
-                <thead className='border-b-2'>
+            <table className='w-full text-left border border-collapse'>
+                <thead className='border-b-2 '>
                     <tr className='border-b border-outline-variant'>
                         <th className='uppercase p-table-cell text-left p-5'>CODIGO INTERNO/OFICIAL</th>
                         <th className='uppercase p-table-cell text-left p-5'>Nome do Medicamento</th>

@@ -1,7 +1,8 @@
 import Input from './componentes/Input'
 import Botao from './Botao'
-import { useState, useEffect } from 'react'
+import { useState, useEffect,useMemo } from 'react'
 let contador=0
+
 function TelaDeRegistro(){
         const [tabela, setTabela]  = useState([])
         const [codigo, setCodigo] = useState('')
@@ -11,7 +12,12 @@ function TelaDeRegistro(){
         const [quantidade, setQuantidade] = useState(0)
         const [preco, setPreco] = useState(0)
 
-
+        const total= useMemo(
+                () => tabela.reduce(
+                        (accu , item) => accu +item.quantidade*item.preco, 0
+                        )
+        )
+        
         const [remedios, setRemedios] = useState([])
         useEffect(
         () => {
@@ -89,6 +95,7 @@ function TelaDeRegistro(){
 
                 /> 
                 </th>
+
                 <th> 
                 <Input name="Nome do Medicamento:"
                         value={nome}
@@ -106,6 +113,7 @@ function TelaDeRegistro(){
                         
                 />
                 </th>
+
                 <th><Input name="Uso:" 
                         value={tipo}
                         onChange ={(e) => setTipo(e.target.value)}
@@ -150,6 +158,16 @@ function TelaDeRegistro(){
               </tr>
                 )
           )}
+          <tr className='border'>  
+                <td className='text-center'><p></p></td>
+                <td className='text-center'><p></p></td>
+                <td className='text-center'><p></p></td>
+                <td className='text-center'><p></p></td>
+                <td className='border text-center'><p> Total Geral:</p></td>
+                <td className='border text-center'><p> 
+                        {total}
+                        </p></td>
+          </tr>
 
            
         </tbody>
