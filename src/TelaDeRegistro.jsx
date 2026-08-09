@@ -72,7 +72,7 @@ function TelaDeRegistro(){
                         
                 >
                 </Input>
-                <Botao  onClick={acaoBotaoAdicionar}></Botao>
+                <Botao  onClick={acaoBotaoAdicionar}>Enviar</Botao>
         
          
          
@@ -143,7 +143,6 @@ function TelaDeRegistro(){
                 <td className='border text-center'>{linha.codigo}</td>
                 <td className='border text-center'>{linha.nome}</td>
                 <td className='border text-center'>{linha.tipo}</td>
-                <td className='border text-center'>{linha.classific}</td>
                 <td className='border text-center'>{linha.quantidade}</td>
                 <td className='border text-center'>{linha.preco}</td>
                 <td className='border text-center'><p> Total: {linha.quantidade * linha.preco}</p></td>
@@ -159,7 +158,7 @@ function TelaDeRegistro(){
 
         </div>
         <div>
-                <Botao  onClick={acaoBotaoAdicionar}></Botao>
+                <Botao  onClick={acaoBotaoAdicionar}>Adicionar</Botao>
         </div>
         </div>
         </>
