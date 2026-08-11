@@ -10,6 +10,7 @@ import CadastroUsuario from './CadastroUsuario'
 import ViewRemedios from './ViewRemedios'
 import ViewLote from './ViewLote'
 import CadastroUnidadeSaude from './CadastroUnidadeSaude'
+import ViewRegistro from './ViewRegistro'
 
 import ControleDeEstoque from './ControleDeEstoque'
 import DistribuicaoUnidade from './DistribuicaoUnidade'

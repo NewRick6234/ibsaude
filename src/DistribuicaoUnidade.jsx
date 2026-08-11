@@ -2,6 +2,8 @@ import { useEffect, useState } from "react"
 import Botao from "./componentes/Botao"
 import Input from "./componentes/Input"
 import imagens from "./imagens/ib_saude.png"
+
+let contador = 0
 function DistribuicaoUnidade(){
 
      let imagem = {
@@ -24,7 +26,7 @@ function DistribuicaoUnidade(){
     const [unidadesSaude, setUnidadesSaude] = useState([])
 
     const [tabela, setTabela]  = useState([])
-        const [codigo, setCodigo] = useState('')
+        const [unidadeDestino, setUnidadeDestino] = useState('')
         const [nome, setNome] = useState('')
         const [tipo, setTipo] = useState('comprimido')
         const [classific, setClasse] = useState('Venda Livre')
@@ -51,13 +53,15 @@ event.preventDefault()
 
 
         let objeto =  {
+
+            
       id: contador++,
-      codigo: codigo,
-      nome: nome,
-      tipo:tipo,
-      classe:classific,
-      quantidade:quantidade,
-      preco:preco
+      codigo: unidadeDestino,
+      nome: dataEnvio,
+      tipo:responsavelLiberacao,
+      classe:responsavelRecebimento,
+      quantidade:anexacaoPedidoFormal,
+      preco:valorSaida
     }
 
         setTabela((prevTabela) => [...prevTabela, objeto]);
