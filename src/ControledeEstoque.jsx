@@ -5,27 +5,39 @@ function ControleDeEstoque() {
     let titulo = {
         fontSize: "25px",
         fontWeight: "bold",
-        textAlign: "center"
+        textAlign: "center",
+        
     }
 
     let tabela = {
-        marginTop: "40px",
-        border: "1px solid black"
+        marginTop: "20px",
+        border: "1px solid black",
+       
+
+  borderSpacing:'10px',
     }
 
     let linhaTabela = {
         borderBottom: "1px solid black",
+        
+
     }
 let estoqueBaixo = {
     display: "flex",
     justifyContent: "center",
-    alignItems: "center", 
+    alignItems: "center"
+    
     
 }
 
 const corSinaleira = (quantidade, minimo) => {
   if (quantidade === 0) return "🔴";
   if (quantidade <= minimo) return "🟠";
+  return "🟢";
+};
+const corSinaleira = (validade, minimo) => {
+  if (validade === 1) return "🔴";
+  if (validade <= minimo) return "🟠";
   return "🟢";
 };
 
@@ -86,16 +98,59 @@ return (
 
 <br></br>
 
-<p>Quantidade</p>
+<div style={{ backgroundColor: '#e8f5fd', padding: '10px', borderRadius: '5px',
+ fontWeight: 'bold', display: 'flex', justifyContent: 'space-around', gap: '15px', 
 
-    🟢 Verde → quantidade maior que 10.
-🟠 Laranja → quantidade entre 1 e 10.
-🔴 Vermelho → quantidade igual a 0.
+
+    
+}}>
+    <div>
+
+    <p>Status da Validade:</p>
+    
+<div style={{ display: 'flex',  justifyContent: 'space-around', gap: '10px',flexDirection: 'column'
+
+}}>
+   <span>
+    🟢 Verde →
+    validade maior que 30 dias. 
+    </span>
+    <span>
+
+    🟠 Laranja →
+    validade entre 10 e 30 dias.
+    </span>
+    <span>
+    🔴 Vermelho →
+    validade  1 dia.
+        </span>
+</div>
+     </div>
+<div>
+
+<p>Status do Estoque:</p>
+
+<div style={{ display: 'flex', justifyContent: 'space-around', gap: '10px',flexDirection: 'column' }}>
+    <span>
+    🟢 Verde → quantidade maior que 10.</span>
+
+    <span >
+    🟠 Laranja → quantidade entre 1 e 10.</span>
+
+<span>  
+    🔴 Vermelho → quantidade igual a 0.</span>
+</div>
+</div>
+      
+
+    
+
+
+
+
+</div>
 
 </>
-
-
-
 
 
 
