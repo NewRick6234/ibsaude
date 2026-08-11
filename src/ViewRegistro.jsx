@@ -4,18 +4,18 @@ import { useState } from 'react'
 import imagem from './imagens/att.png'
 function ViewRegistro(){
     return(<>
-    <div className='flex flex-col items-center gap-40'>
-        <div className='flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4'>
-            <div className='flex-row min-w-100'>
+    <div className='max-w-6xl w-full mx-auto p-4 flex flex-col gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-8'>
+            <div>
                 <h1><strong>Registro de Compra</strong></h1>
             </div>
-            <div className='flex flex-row'>
+            <div className='flex'>
                 <Botao>Imprimir PDF</Botao>
                 <Botao>Baixar XML</Botao>
                 <Botao>Enviar por Email</Botao>
             </div>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mb-8'>
+        <div className=' grid grid-cols-1 md:grid-cols-4 gap-4 mb-8'>
             <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
                 <p className="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Data da Entrada</p>
                 <p className="font-data-mono text-data-mono text-on-surface">15 / 10 / 2024</p>
@@ -35,7 +35,7 @@ function ViewRegistro(){
             </div>
         </div>
 
-        <div className='bg-surface-container-lowest border border-outline-variant rounded-lg p-6 mb-8 flex items-center justify-between gap-110'>
+        <div className=' bg-surface-container-lowest border border-outline-variant rounded-lg p-6 mb-8 flex items-center justify-between gap-110'>
             <div className='h-30 w-100 flex items-center gap-3'>
                 <div className='p-4'>
                     <img className='h-20 p-2' src={imagem} alt="imagem" />

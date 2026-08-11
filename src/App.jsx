@@ -16,6 +16,7 @@ function App() {
 
   return (
     <> 
+    <div className='flex flex-col items-center '>
     <Routes>
       <Route path="/" element={<TelaInicial />} />
       <Route path="/login" element={<Login />} />
@@ -30,6 +31,7 @@ function App() {
         <Route path='verLote' element={<ViewLote/>}/>
       </Route>
     </Routes>
+    </div>
     </>
 
 

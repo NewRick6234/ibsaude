@@ -20,7 +20,7 @@ function Menu(){
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
-    width: "100%"
+    width: "100vw"
     // flexWrap: "wrap" 
     //color: "black" 
   }
