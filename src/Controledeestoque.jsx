@@ -35,6 +35,11 @@ const corSinaleira = (quantidade, minimo) => {
   if (quantidade <= minimo) return "🟠";
   return "🟢";
 };
+const corSinaleira = (validade, minimo) => {
+  if (validade === 1) return "🔴";
+  if (validade <= minimo) return "🟠";
+  return "🟢";
+};
 
     const [remedios, setRemedios] = useState([])
 
