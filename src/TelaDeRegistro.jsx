@@ -58,25 +58,21 @@ function TelaDeRegistro(){
                         type="date"
                 >
                 </Input>
-                <Input name="Fornecedor:"
-                        
-                >
+                <Input>
+                        Fornecedor:
                         
                 </Input>
 
                
                 
-                <Input name="Numero da Nota Fiscal:"
-                
-                >
+                <Input>
+                        Numero da Nota Fiscal:
                 </Input>
-                <Input name="Anexação de documentos (PDF/XML):"
-                        type="file"
-                >
+                <Input>
+                        Anexação de documentos (PDF/XML):
                 </Input>
-                <Input name="Nome do responsável pelo recebimento:"
-                        
-                >
+                <Input>
+                        Nome do responsável pelo recebimento:
                 </Input>
                 <Botao  onClick={acaoBotaoAdicionar}>Enviar</Botao>
         
@@ -89,15 +85,15 @@ function TelaDeRegistro(){
         <table className="gap-2 w-full">
         <thead>
           <tr className='border-2 h-20'>
-                <th><Input name="Codigo interno e/ ou código oficial:" 
+                <th><Input 
                         value={codigo}
                         onChange ={(e) => setCodigo(e.target.value)}
 
-                /> 
+                >Codigo interno e/ ou código oficial:</Input> 
                 </th>
 
                 <th> 
-                <Input name="Nome do Medicamento:"
+                <Input
                         value={nome}
                         onChange={(e) => {
                         const novoNome = e.target.value;
@@ -111,14 +107,14 @@ function TelaDeRegistro(){
                         }}
                         options={remedios.map(r => r.nome)}
                         
-                />
+                >Nome do Medicamento:</Input>
                 </th>
 
-                <th><Input name="Uso:" 
+                <th><Input
                         value={tipo}
                         onChange ={(e) => setTipo(e.target.value)}
 
-                /> 
+                >Uso:</Input> 
                 </th>
 
                  
@@ -127,18 +123,18 @@ function TelaDeRegistro(){
 
                 
 
-                <th><Input name="Quantidade Adquirida:"
+                <th><Input
                         type="number"
                         value={quantidade}
                         onChange ={(e) => setQuantidade(e.target.value)}
-                />
+                >Quantidade Adquirida:</Input>
                 </th>
 
-                <th> <Input name="Valor Unitário:"
+                <th> <Input
                         type="number"
                         value={preco}
                         onChange = { (e) => setPreco(e.target.value)}
-                />
+                >Valor Unitário:</Input>
                 </th>
                 <th><p> Total: {quantidade * preco}</p></th>
 
