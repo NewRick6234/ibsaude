@@ -7,7 +7,9 @@
     "usoEspecifico": "Alívio de dor e febre",
     "controlePorLote": "Lote 12345",
     "controlePorValidade": "2026-09-31",
-    "saldoAtual": 14
+    "saldoAtual": 14,
+    "medicamentosProximosAoVencimento": 0,
+    "movimentacoesRealizadas": "venda do lote 12345"
 
   },
   {
@@ -18,7 +20,9 @@
     "usoEspecifico": "Controle de febre",
     "controlePorLote": "Lote 67890",
     "controlePorValidade": "2026-08-30",
-    "saldoAtual": 4
+    "saldoAtual": 4,
+    "medicamentosProximosAoVencimento": 9,
+    "movimentacoesRealizadas": "compra do lote 67890"
     
   },
   {
@@ -26,11 +30,131 @@
     "classificacao": "Antibiótico",
     "codigoInterno": "MED-003",
     "codigoOficial": "AMX-300",
-    "usoEspecifico": "Tratamento de infecções",
+    "usoEspecifico": "Tratamento de infecções"
+  },
+  {
+    "nome": "Ibuprofeno",
+    "classificacao": "Anti-inflamatório",
+    "codigoInterno": "MED-004",
+    "codigoOficial": "IBU-400",
+    "usoEspecifico": "Redução de inflamação e dor"
+  },
+  {
+    "nome": "Loratadina",
+    "classificacao": "Anti-histamínico",
+    "codigoInterno": "MED-005",
+    "codigoOficial": "LOR-500",
+    "usoEspecifico": "Tratamento de alergias"
+  },
+  {
+    "nome": "Omeprazol",
+    "classificacao": "Gastroprotetor",
+    "codigoInterno": "MED-006",
+    "codigoOficial": "OMP-600",
+    "usoEspecifico": "Redução de acidez gástrica"
+  },
+  {
+    "nome": "Simeticona",
+    "classificacao": "Antiflatulento",
+    "codigoInterno": "MED-007",
+    "codigoOficial": "SIM-700",
+    "usoEspecifico": "Alívio de gases"
+  },
+  {
+    "nome": "Losartana",
+    "classificacao": "Anti-hipertensivo",
+    "codigoInterno": "MED-008",
+    "codigoOficial": "LOS-800",
+    "usoEspecifico": "Controle da pressão arterial"
+  },
+  {
+    "nome": "Metformina",
+    "classificacao": "Antidiabético",
+    "codigoInterno": "MED-009",
+    "codigoOficial": "MET-900",
+    "usoEspecifico": "Controle da glicemia"
+  },
+  {
+    "nome": "Azitromicina",
+    "classificacao": "Antibiótico",
+    "codigoInterno": "MED-010",
+    "codigoOficial": "AZI-010",
+    "usoEspecifico": "Tratamento de infecções bacterianas"
+  },
+  {
+    "nome": "Sinvastatina",
+    "classificacao": "Estatina",
+    "codigoInterno": "MED-011",
+    "codigoOficial": "SIN-011",
+    "usoEspecifico": "Controle do colesterol"
+  },
+  {
+    "nome": "Fluoxetina",
+    "classificacao": "Antidepressivo",
+    "codigoInterno": "MED-012",
+    "codigoOficial": "FLX-012",
+    "usoEspecifico": "Tratamento de depressão"
+  },
+  {
+    "nome": "Alprazolam",
+    "classificacao": "Ansiolítico",
+    "codigoInterno": "MED-013",
+    "codigoOficial": "ALP-013",
+    "usoEspecifico": "Controle de ansiedade"
+  },
+  {
+    "nome": "Diclofenaco",
+    "classificacao": "Anti-inflamatório",
+    "codigoInterno": "MED-014",
+    "codigoOficial": "DIC-014",
+    "usoEspecifico": "Alívio de dores musculares"
+  },
+  {
+    "nome": "Dexametasona",
+    "classificacao": "Corticosteroide",
+    "codigoInterno": "MED-015",
+    "codigoOficial": "DEX-015",
+    "usoEspecifico": "Tratamento de processos inflamatórios"
+  },
+  {
+    "nome": "Atorvastatina",
+    "classificacao": "Estatina",
+    "codigoInterno": "MED-016",
+    "codigoOficial": "ATO-016",
+    "usoEspecifico": "Redução do colesterol LDL"
+  },
+  {
+    "nome": "Clonazepam",
+    "classificacao": "Anticonvulsivante",
+    "codigoInterno": "MED-017",
+    "codigoOficial": "CLO-017",
+    "usoEspecifico": "Tratamento de distúrbios de ansiedade"
+  },
+  {
+    "nome": "Captopril",
+    "classificacao": "Anti-hipertensivo",
+    "codigoInterno": "MED-018",
+    "codigoOficial": "CAP-018",
+    "usoEspecifico": "Tratamento de hipertensão"
+  },
+  {
+    "nome": "Dimenidrinato",
+    "classificacao": "Antiemético",
+    "codigoInterno": "MED-019",
+    "codigoOficial": "DIM-019",
+    "usoEspecifico": "Prevenção de náuseas"
+  },
+  {
+    "nome": "Aspirina",
+    "classificacao": "Antiagregante plaquetário",
+    "codigoInterno": "MED-020",
+    "codigoOficial": "ASP-020",
+    "usoEspecifico": "Prevenção cardiovascular",
     "controlePorLote": "Lote 11111",
     "controlePorValidade": "2027-03-15",
-    "saldoAtual": 200
-    
+    "saldoAtual": 200,
+    "medicamentosProximosAoVencimento": 29,
+    "movimentacoesRealizadas": "venda do lote 11111"
   },
   {
   "nome": "Ibuprofeno",
@@ -40,7 +164,9 @@
     "usoEspecifico": "Alívio de dor e inflamação",
     "controlePorLote": "Lote 22222",
     "controlePorValidade": "2026-12-31",
-    "saldoAtual": 0
+    "saldoAtual": 0,
+    "medicamentosProximosAoVencimento": 30,
+    "movimentacoesRealizadas": "compra do lote 22222"
    
   },
   {
@@ -51,7 +177,9 @@
     "usoEspecifico": "Tratamento de úlceras e refluxo gástrico",
     "controlePorLote": "Lote 33333",
     "controlePorValidade": "2027-06-30",
-    "saldoAtual": 120
+    "saldoAtual": 120,
+    "medicamentosProximosAoVencimento": 0,
+    "movimentacoesRealizadas": "venda do lote 33333"
     
   }
 

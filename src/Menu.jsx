@@ -20,7 +20,7 @@ function Menu(){
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
-    width: "100%"
+    width: "100vw"
     // flexWrap: "wrap" 
     //color: "black" 
   }
@@ -45,6 +45,7 @@ return(
       {cadastro && (
       <ul>
         <li><Link to='cadastroMedicamento'>Cadastro de Medicamentos</Link></li>
+        <li><Link to='cadastroSaude'>Unidade de Saude</Link></li>
         <li><Link to="LoteMedicamentos">Cadastrar Lote de Medicamentos</Link></li>
       </ul>
       )}
@@ -61,14 +62,24 @@ return(
       )}
     </li>
     <li style={rota}>
-      <Link to='TelaDeRegistro'>Tela de Registro</Link>
+      <span onClick={() => setVer(!ver)}>Registro</span>
+      {ver && (
+      <ul><li>
+        <Link to='TelaDeRegistro'>Tela De Cadastro</Link>
+        </li>
+        <li>
+          <Link to="ViewRegistro">Visualizar Registro</Link>
+          </li></ul>
+      )}
       </li>
     <li style={rota}>
     
      <Link to='ControleDeEstoque'>Controle de Estoque</Link>
       </li>
     <li style={rota}>
+      <Link to="DistribuicaoUnidade">
       Distribuição para unidades
+      </Link>
       </li>
     <li style={rota}>
       Rastreabilidade 
