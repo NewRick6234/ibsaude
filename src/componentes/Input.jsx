@@ -1,8 +1,8 @@
- export default function Input({ label, name, tipo = "text", options, ...props }) {
+ export default function Input({ label, name, tipo = "text", options,children, ...props}) {
   return (
     <div className="w-full m-4"> 
       <label htmlFor={name} className="block text-sm font-medium text-gray-700 text-left">
-        {label || name} {/* Exibe a prop label, ou cai de volta no name se label for omitido */}
+        {label || children} {/* Exibe a prop label, ou cai de volta no name se label for omitido */}
       </label>
       
       <div className="mt-2">
