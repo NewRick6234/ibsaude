@@ -35,11 +35,24 @@ const corSinaleira = (quantidade, minimo) => {
   if (quantidade <= minimo) return "🟠";
   return "🟢";
 };
-const corSinaleira = (validade, minimo) => {
-  if (validade === 1) return "🔴";
-  if (validade <= minimo) return "🟠";
-  return "🟢";
+
+const Sinaleira = ({ validade = 0, minimo = 0 }) => {
+  if (validade <= 0) {
+    return (
+      <span className="relative flex h-3 w-3 inline-block align-middle">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+      </span>
+    );
+  }
+
+  if (validade <= minimo) {
+    return <span className="inline-block h-3 w-3 rounded-full bg-orange-500 align-middle" />;
+  }
+
+  return <span className="inline-block h-3 w-3 rounded-full bg-green-500 align-middle" />;
 };
+
 
     const [remedios, setRemedios] = useState([])
 
@@ -86,7 +99,7 @@ return (
                 {corSinaleira(remedio.saldoAtual, 10)} 
       
             </td>
-            <td className="text-center">{remedio.medicamentosProximosAoVencimento}</td>
+            <td className="text-center"><Sinaleira validade={remedio.medicamentosProximosAoVencimento} minimo={10} /></td>
             <td className="text-center">{remedio.movimentacoesRealizadas}</td>
           </tr>
 
