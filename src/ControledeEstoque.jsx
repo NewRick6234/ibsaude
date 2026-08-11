@@ -5,21 +5,28 @@ function ControleDeEstoque() {
     let titulo = {
         fontSize: "25px",
         fontWeight: "bold",
-        textAlign: "center"
+        textAlign: "center",
+        
     }
 
     let tabela = {
-        marginTop: "40px",
-        border: "1px solid black"
+        marginTop: "20px",
+        border: "1px solid black",
+       
+
+  borderSpacing:'10px',
     }
 
     let linhaTabela = {
         borderBottom: "1px solid black",
+        
+
     }
 let estoqueBaixo = {
     display: "flex",
     justifyContent: "center",
-    alignItems: "center", 
+    alignItems: "center"
+    
     
 }
 
@@ -28,6 +35,24 @@ const corSinaleira = (quantidade, minimo) => {
   if (quantidade <= minimo) return "🟠";
   return "🟢";
 };
+
+const Sinaleira = ({ validade = 0, minimo = 0 }) => {
+  if (validade <= 0) {
+    return (
+      <span className="relative flex h-3 w-3 inline-block align-middle">
+        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+      </span>
+    );
+  }
+
+  if (validade <= minimo) {
+    return <span className="inline-block h-3 w-3 rounded-full bg-orange-500 align-middle" />;
+  }
+
+  return <span className="inline-block h-3 w-3 rounded-full bg-green-500 align-middle" />;
+};
+
 
     const [remedios, setRemedios] = useState([])
 
@@ -74,7 +99,7 @@ return (
                 {corSinaleira(remedio.saldoAtual, 10)} 
       
             </td>
-            <td className="text-center">{remedio.medicamentosProximosAoVencimento}</td>
+            <td className="text-center"><Sinaleira validade={remedio.medicamentosProximosAoVencimento} minimo={10} /></td>
             <td className="text-center">{remedio.movimentacoesRealizadas}</td>
           </tr>
 
@@ -86,16 +111,59 @@ return (
 
 <br></br>
 
-<p>Quantidade</p>
+<div style={{ backgroundColor: '#e8f5fd', padding: '10px', borderRadius: '5px',
+ fontWeight: 'bold', display: 'flex', justifyContent: 'space-around', gap: '15px', 
 
-    🟢 Verde → quantidade maior que 10.
-🟠 Laranja → quantidade entre 1 e 10.
-🔴 Vermelho → quantidade igual a 0.
+
+    
+}}>
+    <div>
+
+    <p>Status da Validade:</p>
+    
+<div style={{ display: 'flex',  justifyContent: 'space-around', gap: '10px',flexDirection: 'column',boxShadow: "0 2px 4px rgba(0,0,0,0.05)"
+
+}}>
+   <span>
+    🟢 Verde →
+    validade maior que 30 dias. 
+    </span>
+    <span>
+
+    🟠 Laranja →
+    validade entre 10 e 30 dias.
+    </span>
+    <span>
+    🔴 Vermelho →
+    validade  1 dia.
+        </span>
+</div>
+     </div>
+<div>
+
+<p>Status do Estoque:</p>
+
+<div style={{ display: 'flex', justifyContent: 'space-around', gap: '10px',flexDirection: 'column' }}>
+    <span>
+    🟢 Verde → quantidade maior que 10.</span>
+
+    <span >
+    🟠 Laranja → quantidade entre 1 e 10.</span>
+
+<span>  
+    🔴 Vermelho → quantidade igual a 0.</span>
+</div>
+</div>
+      
+
+    
+
+
+
+
+</div>
 
 </>
-
-
-
 
 
 
