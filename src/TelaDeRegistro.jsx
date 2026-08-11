@@ -1,5 +1,5 @@
 import Input from './componentes/Input'
-import Botao from './Botao'
+import Botao from './componentes/Botao'
 import { useState, useEffect,useMemo } from 'react'
 let contador=0
 
