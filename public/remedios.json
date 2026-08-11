@@ -7,8 +7,9 @@
     "usoEspecifico": "Alívio de dor e febre",
     "controlePorLote": "Lote 12345",
     "controlePorValidade": "2026-09-31",
-    "saldoAtual": 14
-    
+    "saldoAtual": 14,
+    "medicamentosProximosAoVencimento": 0,
+    "movimentacoesRealizadas": "venda do lote 12345"
 
   },
   {
@@ -19,7 +20,9 @@
     "usoEspecifico": "Controle de febre",
     "controlePorLote": "Lote 67890",
     "controlePorValidade": "2026-08-30",
-    "saldoAtual": 4
+    "saldoAtual": 4,
+    "medicamentosProximosAoVencimento": 9,
+    "movimentacoesRealizadas": "compra do lote 67890"
     
   },
   {
@@ -149,8 +152,9 @@
     "usoEspecifico": "Prevenção cardiovascular",
     "controlePorLote": "Lote 11111",
     "controlePorValidade": "2027-03-15",
-    "saldoAtual": 200
-    
+    "saldoAtual": 200,
+    "medicamentosProximosAoVencimento": 29,
+    "movimentacoesRealizadas": "venda do lote 11111"
   },
   {
   "nome": "Ibuprofeno",
@@ -160,7 +164,9 @@
     "usoEspecifico": "Alívio de dor e inflamação",
     "controlePorLote": "Lote 22222",
     "controlePorValidade": "2026-12-31",
-    "saldoAtual": 0
+    "saldoAtual": 0,
+    "medicamentosProximosAoVencimento": 30,
+    "movimentacoesRealizadas": "compra do lote 22222"
    
   },
   {
@@ -171,7 +177,9 @@
     "usoEspecifico": "Tratamento de úlceras e refluxo gástrico",
     "controlePorLote": "Lote 33333",
     "controlePorValidade": "2027-06-30",
-    "saldoAtual": 120
+    "saldoAtual": 120,
+    "medicamentosProximosAoVencimento": 0,
+    "movimentacoesRealizadas": "venda do lote 33333"
     
   }
 
