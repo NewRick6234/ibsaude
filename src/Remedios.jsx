@@ -1,4 +1,4 @@
-import Input from "../Input";
+import Input from "./componentes/Input";
 import Botao from './componentes/Botao';
 import back from "./imagens/medicamento.webp"
 function Remedios(){
