@@ -26,6 +26,7 @@ function DistribuicaoUnidade(){
         const [unidadesSaude, setUnidadesSaude] = useState([])
         const [tabela, setTabela]  = useState([])
         const [unidadeDestino, setUnidadeDestino] = useState('')
+        const [quantidade, setQuantidade] = useState(0)
         const [dataEnvio, setDataEnvio] = useState('')
         const [responsavelLiberacao, setResponsavelLiberacao] = useState('')
         const [responsavelRecebimento, setResponsavelRecebimento] = useState('')
@@ -47,15 +48,16 @@ function DistribuicaoUnidade(){
             }
         , [])
 
-const acaoBotaoAdicionar = (event) => {
-event.preventDefault()
+const acaoBotaoAdicionar = () => {
 
+    alert('Caminho novo')
 
         let objeto =  {
 
             
       id: contador++,
       unidadeDestino: unidadeDestino,
+      quantidade: quantidade,
       dataEnvio: dataEnvio,
       responsavelLiberacao:responsavelLiberacao,
       responsavelLiberacao:responsavelRecebimento,
@@ -93,7 +95,7 @@ return(
 
         <Input type="number">Valor de saída</Input>
 
-        <Botao onclick={acaoBotaoAdicionar}>Enviar</Botao>
+        <Botao onClick={acaoBotaoAdicionar}>Enviar</Botao>
 
         </form>
         </div>
@@ -127,6 +129,7 @@ return(
             (linha) => (
               <tr style={linhaTabela} key={linha.id}>
                 <td className='border text-center'>{linha.unidadeDestino}</td>
+                <td className="text-center">{linha.quantidade}</td>
                 <td className='border text-center'>{linha.dataEnvio}</td>
                 <td className='border text-center'>{linha.responsavelLiberacao}</td>
                 <td className='border text-center'>{linha.responsavelRecebimento}</td>
