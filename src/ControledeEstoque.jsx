@@ -10,7 +10,7 @@ function ControledeEstoque() {
     }
 
     let tabela = {
-        marginTop: "20px",
+        marginTop: "60px",
         border: "1px solid black",
        
 
@@ -74,7 +74,7 @@ return (
 <>
  <h1 style={titulo}>Controle de Estoque Inteligente</h1>
 
- <table style={tabela} className="w-full" border="1" cellPadding="8" cellSpacing="0">
+ <table style={tabela} className="w-full" border="1" cellSpacing="40" cellPadding="5">
       <thead>
         <tr style={linhaTabela}>
             <th>Nome do Medicamento</th>
