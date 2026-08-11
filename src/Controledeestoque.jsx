@@ -121,7 +121,7 @@ return (
 
     <p>Status da Validade:</p>
     
-<div style={{ display: 'flex',  justifyContent: 'space-around', gap: '10px',flexDirection: 'column'
+<div style={{ display: 'flex',  justifyContent: 'space-around', gap: '10px',flexDirection: 'column',boxShadow: "0 2px 4px rgba(0,0,0,0.05)"
 
 }}>
    <span>
