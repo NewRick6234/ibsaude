@@ -1,5 +1,5 @@
 import Input from './componentes/Input'
-import Botao from './Botao'
+import Botao from './componentes/Botao'
 import { useState } from 'react'
 import imagem from './imagens/att.png'
 function ViewRegistro(){

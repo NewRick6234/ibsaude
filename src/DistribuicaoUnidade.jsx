@@ -23,15 +23,14 @@ function DistribuicaoUnidade(){
         borderBottom: "1px solid black",
     }
 
-    const [unidadesSaude, setUnidadesSaude] = useState([])
-
-    const [tabela, setTabela]  = useState([])
+        const [unidadesSaude, setUnidadesSaude] = useState([])
+        const [tabela, setTabela]  = useState([])
         const [unidadeDestino, setUnidadeDestino] = useState('')
-        const [nome, setNome] = useState('')
-        const [tipo, setTipo] = useState('comprimido')
-        const [classific, setClasse] = useState('Venda Livre')
-        const [quantidade, setQuantidade] = useState(0)
-        const [preco, setPreco] = useState(0)
+        const [dataEnvio, setDataEnvio] = useState('')
+        const [responsavelLiberacao, setResponsavelLiberacao] = useState('')
+        const [responsavelRecebimento, setResponsavelRecebimento] = useState('')
+        const [anexacaoPedidoFormal, setAnexacaoPedidoFormal] = useState('')
+        const [valorSaida, setValorSaida] = useState(0)
 
 
      
@@ -56,12 +55,12 @@ event.preventDefault()
 
             
       id: contador++,
-      codigo: unidadeDestino,
-      nome: dataEnvio,
-      tipo:responsavelLiberacao,
-      classe:responsavelRecebimento,
-      quantidade:anexacaoPedidoFormal,
-      preco:valorSaida
+      unidadeDestino: unidadeDestino,
+      dataEnvio: dataEnvio,
+      responsavelLiberacao:responsavelLiberacao,
+      responsavelLiberacao:responsavelRecebimento,
+      anexacaoPedidoFormal:anexacaoPedidoFormal,
+      valorSaida:valorSaida
     }
 
         setTabela((prevTabela) => [...prevTabela, objeto]);
@@ -94,7 +93,7 @@ return(
 
         <Input type="number">Valor de saída</Input>
 
-        <Botao>Enviar</Botao>
+        <Botao onclick={acaoBotaoAdicionar}>Enviar</Botao>
 
         </form>
         </div>
@@ -124,6 +123,19 @@ return(
             <td className="text-center">{unidadeSaude.valorSaida}</td>
           </tr>
         ))}
+        {tabela.map(
+            (linha) => (
+              <tr style={linhaTabela} key={linha.id}>
+                <td className='border text-center'>{linha.unidadeDestino}</td>
+                <td className='border text-center'>{linha.dataEnvio}</td>
+                <td className='border text-center'>{linha.responsavelLiberacao}</td>
+                <td className='border text-center'>{linha.responsavelRecebimento}</td>
+                <td className='border text-center'>{linha.anexacaoPedidoFormal}</td>
+                <td className='border text-center'>{linha.valorSaida}</td>
+                 
+              </tr>
+                )
+          )}
       </tbody>
     </table>
 
