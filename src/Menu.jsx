@@ -45,6 +45,7 @@ return(
       {cadastro && (
       <ul>
         <li><Link to='cadastroMedicamento'>Cadastro de Medicamentos</Link></li>
+        <li><Link to='cadastroSaude'>Unidade de Saude</Link></li>
         <li><Link to="LoteMedicamentos">Cadastrar Lote de Medicamentos</Link></li>
       </ul>
       )}
@@ -76,7 +77,9 @@ return(
      <Link to='ControleDeEstoque'>Controle de Estoque</Link>
       </li>
     <li style={rota}>
+      <Link to="DistribuicaoUnidade">
       Distribuição para unidades
+      </Link>
       </li>
     <li style={rota}>
       Rastreabilidade 
