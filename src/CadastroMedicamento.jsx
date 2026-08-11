@@ -19,7 +19,7 @@ function CadastroMedicamento(){
         <Input name="Uso específico:" >Uso Específico</Input>
        
 
-    <Botao></Botao>
+    <Botao>Enviar</Botao>
     </form>
     </div>
     </>
