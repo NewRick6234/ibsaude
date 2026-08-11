@@ -6,7 +6,7 @@
     "codigoOficial": "DB-100",
     "usoEspecifico": "Alívio de dor e febre",
     "controlePorLote": "Lote 12345",
-    "controlePorValidade": "2026-09-31",
+    "controlePorValidade": "2026-08-14",
     "saldoAtual": 14,
     "medicamentosProximosAoVencimento": 0,
     "movimentacoesRealizadas": "venda do lote 12345"
@@ -30,119 +30,204 @@
     "classificacao": "Antibiótico",
     "codigoInterno": "MED-003",
     "codigoOficial": "AMX-300",
-    "usoEspecifico": "Tratamento de infecções"
+    "usoEspecifico": "Tratamento de infecções",
+     "controlePorLote": "Lote 23456",
+    "controlePorValidade": "2026-09-08",
+    "saldoAtual": 22,
+    "medicamentosProximosAoVencimento":19,
+    "movimentacoesRealizadas": "compra do lote 23456"
   },
   {
     "nome": "Ibuprofeno",
     "classificacao": "Anti-inflamatório",
     "codigoInterno": "MED-004",
     "codigoOficial": "IBU-400",
-    "usoEspecifico": "Redução de inflamação e dor"
+    "usoEspecifico": "Redução de inflamação e dor",
+     "controlePorLote": "Lote 12657",
+    "controlePorValidade": "2026-08-12",
+    "saldoAtual": 80,
+    "medicamentosProximosAoVencimento": 0,
+    "movimentacoesRealizadas": "compra do lote 12657"
   },
   {
     "nome": "Loratadina",
     "classificacao": "Anti-histamínico",
     "codigoInterno": "MED-005",
     "codigoOficial": "LOR-500",
-    "usoEspecifico": "Tratamento de alergias"
+    "usoEspecifico": "Tratamento de alergias",
+     "controlePorLote": "Lote 54321",
+    "controlePorValidade": "2026-08-21",
+    "saldoAtual": 15,
+    "medicamentosProximosAoVencimento": 15,
+    "movimentacoesRealizadas": "venda do lote 54321"
   },
   {
     "nome": "Omeprazol",
     "classificacao": "Gastroprotetor",
     "codigoInterno": "MED-006",
     "codigoOficial": "OMP-600",
-    "usoEspecifico": "Redução de acidez gástrica"
+    "usoEspecifico": "Redução de acidez gástrica",
+     "controlePorLote": "Lote 98765",
+    "controlePorValidade": "2027-01-31",
+    "saldoAtual": 30,
+    "medicamentosProximosAoVencimento": 35,
+    "movimentacoesRealizadas": "compra do lote 98765"
   },
   {
     "nome": "Simeticona",
     "classificacao": "Antiflatulento",
     "codigoInterno": "MED-007",
     "codigoOficial": "SIM-700",
-    "usoEspecifico": "Alívio de gases"
+    "usoEspecifico": "Alívio de gases",
+      "controlePorLote": "Lote 11223",
+    "controlePorValidade": "2026-12-28",
+    "saldoAtual": 25,
+    "medicamentosProximosAoVencimento": 0,
+    "movimentacoesRealizadas": "compra do lote 11223"
   },
   {
     "nome": "Losartana",
     "classificacao": "Anti-hipertensivo",
     "codigoInterno": "MED-008",
     "codigoOficial": "LOS-800",
-    "usoEspecifico": "Controle da pressão arterial"
+    "usoEspecifico": "Controle da pressão arterial",
+      "controlePorLote": "Lote 33445",
+    "controlePorValidade": "2027-02-15",
+    "saldoAtual": 50,
+    "medicamentosProximosAoVencimento": 30,
+    "movimentacoesRealizadas": "compra do lote 33445"         
   },
   {
     "nome": "Metformina",
     "classificacao": "Antidiabético",
     "codigoInterno": "MED-009",
     "codigoOficial": "MET-900",
-    "usoEspecifico": "Controle da glicemia"
+    "usoEspecifico": "Controle da glicemia",
+      "controlePorLote": "Lote 55667",
+    "controlePorValidade": "2027-03-10",
+    "saldoAtual": 40,
+    "medicamentosProximosAoVencimento": 35,
+    "movimentacoesRealizadas": "compra do lote 55667"
   },
   {
     "nome": "Azitromicina",
     "classificacao": "Antibiótico",
     "codigoInterno": "MED-010",
     "codigoOficial": "AZI-010",
-    "usoEspecifico": "Tratamento de infecções bacterianas"
+    "usoEspecifico": "Tratamento de infecções bacterianas",
+      "controlePorLote": "Lote 77889",
+    "controlePorValidade": "2027-04-20",
+    "saldoAtual": 35,
+    "medicamentosProximosAoVencimento": 35,
+    "movimentacoesRealizadas": "compra do lote 77889"
   },
   {
     "nome": "Sinvastatina",
     "classificacao": "Estatina",
     "codigoInterno": "MED-011",
     "codigoOficial": "SIN-011",
-    "usoEspecifico": "Controle do colesterol"
+    "usoEspecifico": "Controle do colesterol",
+      "controlePorLote": "Lote 99001",
+    "controlePorValidade": "2027-05-25",
+    "saldoAtual": 60,
+    "medicamentosProximosAoVencimento": 32,
+    "movimentacoesRealizadas": "venda do lote 99001"
   },
   {
     "nome": "Fluoxetina",
     "classificacao": "Antidepressivo",
     "codigoInterno": "MED-012",
     "codigoOficial": "FLX-012",
-    "usoEspecifico": "Tratamento de depressão"
+    "usoEspecifico": "Tratamento de depressão",
+      "controlePorLote": "Lote 22334",
+    "controlePorValidade": "2027-06-30",
+    "saldoAtual": 45,
+    "medicamentosProximosAoVencimento": 40,
+    "movimentacoesRealizadas": "compra do lote 22334"
   },
   {
     "nome": "Alprazolam",
     "classificacao": "Ansiolítico",
     "codigoInterno": "MED-013",
     "codigoOficial": "ALP-013",
-    "usoEspecifico": "Controle de ansiedade"
+    "usoEspecifico": "Controle de ansiedade",
+      "controlePorLote": "Lote 44556",
+    "controlePorValidade": "2027-07-15",
+    "saldoAtual": 30,
+    "medicamentosProximosAoVencimento": 35,
+    "movimentacoesRealizadas": "compra do lote 44556"
   },
   {
     "nome": "Diclofenaco",
     "classificacao": "Anti-inflamatório",
     "codigoInterno": "MED-014",
     "codigoOficial": "DIC-014",
-    "usoEspecifico": "Alívio de dores musculares"
+    "usoEspecifico": "Alívio de dores musculares",
+      "controlePorLote": "Lote 66778",
+    "controlePorValidade": "2027-08-10",
+    "saldoAtual": 55,
+    "medicamentosProximosAoVencimento": 35,
+    "movimentacoesRealizadas": "venda do lote 66778"
   },
   {
     "nome": "Dexametasona",
     "classificacao": "Corticosteroide",
     "codigoInterno": "MED-015",
     "codigoOficial": "DEX-015",
-    "usoEspecifico": "Tratamento de processos inflamatórios"
+    "usoEspecifico": "Tratamento de processos inflamatórios",
+      "controlePorLote": "Lote 88990",
+    "controlePorValidade": "2027-09-05",
+    "saldoAtual": 25,
+    "medicamentosProximosAoVencimento": 35,
+    "movimentacoesRealizadas": "compra do lote 88990"
   },
   {
     "nome": "Atorvastatina",
     "classificacao": "Estatina",
     "codigoInterno": "MED-016",
     "codigoOficial": "ATO-016",
-    "usoEspecifico": "Redução do colesterol LDL"
+    "usoEspecifico": "Redução do colesterol LDL",
+      "controlePorLote": "Lote 10101",
+    "controlePorValidade": "2026-10-20",
+    "saldoAtual": 70,
+    "medicamentosProximosAoVencimento": 0,
+    "movimentacoesRealizadas": "compra do lote 10101"
   },
   {
     "nome": "Clonazepam",
     "classificacao": "Anticonvulsivante",
     "codigoInterno": "MED-017",
     "codigoOficial": "CLO-017",
-    "usoEspecifico": "Tratamento de distúrbios de ansiedade"
+    "usoEspecifico": "Tratamento de distúrbios de ansiedade",
+      "controlePorLote": "Lote 12121",
+    "controlePorValidade": "2027-11-15",
+    "saldoAtual": 40,
+    "medicamentosProximosAoVencimento":40,
+    "movimentacoesRealizadas": "compra do lote 12121"
   },
   {
     "nome": "Captopril",
     "classificacao": "Anti-hipertensivo",
     "codigoInterno": "MED-018",
     "codigoOficial": "CAP-018",
-    "usoEspecifico": "Tratamento de hipertensão"
+    "usoEspecifico": "Tratamento de hipertensão",
+      "controlePorLote": "Lote 14141",
+    "controlePorValidade": "2027-12-10",
+    "saldoAtual": 50,
+    "medicamentosProximosAoVencimento": 35,
+    "movimentacoesRealizadas": "compra do lote 14141"
   },
   {
     "nome": "Dimenidrinato",
     "classificacao": "Antiemético",
     "codigoInterno": "MED-019",
     "codigoOficial": "DIM-019",
-    "usoEspecifico": "Prevenção de náuseas"
+    "usoEspecifico": "Prevenção de náuseas",
+      "controlePorLote": "Lote 16161",
+    "controlePorValidade": "2028-01-05",
+    "saldoAtual": 30,
+    "medicamentosProximosAoVencimento": 35,
+    "movimentacoesRealizadas": "compra do lote 16161"
   },
   {
     "nome": "Aspirina",
@@ -176,7 +261,7 @@
     "codigoOficial": "OME-500",
     "usoEspecifico": "Tratamento de úlceras e refluxo gástrico",
     "controlePorLote": "Lote 33333",
-    "controlePorValidade": "2027-06-30",
+    "controlePorValidade": "2026-09-30",
     "saldoAtual": 120,
     "medicamentosProximosAoVencimento": 0,
     "movimentacoesRealizadas": "venda do lote 33333"
