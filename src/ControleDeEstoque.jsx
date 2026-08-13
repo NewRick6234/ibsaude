@@ -14,7 +14,7 @@ function ControledeEstoque() {
         border: "1px solid black",
        
 
-  borderSpacing:'10px',
+  borderSpacing:'40px',
     }
 
     let linhaTabela = {
