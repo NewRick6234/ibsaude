@@ -1,4 +1,4 @@
-function Botao({children, ...props}){
+function Botao({children,type="submit", ...props}){
 
 let botao = {
   backgroundColor: "#0480e6"
@@ -6,7 +6,8 @@ let botao = {
 
     return(
      
-        <button 
+        <button
+          type={type}
           {...props}
           style={botao} 
           type="button" 
