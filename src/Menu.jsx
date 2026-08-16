@@ -82,10 +82,14 @@ return(
       </Link>
       </li>
     <li style={rota}>
+      <Link to="Rastreabilidade">
       Rastreabilidade 
+      </Link>
       </li>
       <li style={rota}>
-        Painel administrativo
+        <Link to="PainelAdministrativo">
+          Painel administrativo
+        </Link>
       </li>
 </ul>
 </div>
