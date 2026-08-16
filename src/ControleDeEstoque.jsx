@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react"
 
-function ControleDeEstoque() {
+function ControledeEstoque() {
     let titulo = {
         fontSize: "25px",
         fontWeight: "bold",
@@ -10,11 +10,11 @@ function ControleDeEstoque() {
     }
 
     let tabela = {
-        marginTop: "20px",
+        marginTop: "60px",
         border: "1px solid black",
        
 
-  borderSpacing:'10px',
+  borderSpacing:'40px',
     }
 
     let linhaTabela = {
@@ -74,7 +74,7 @@ return (
 <>
  <h1 style={titulo}>Controle de Estoque Inteligente</h1>
 
- <table style={tabela} className="w-full" border="1" cellPadding="8" cellSpacing="0">
+ <table style={tabela} className="w-full" border="1" cellSpacing="40" cellPadding="5">
       <thead>
         <tr style={linhaTabela}>
             <th>Nome do Medicamento</th>
@@ -121,7 +121,7 @@ return (
 
     <p>Status da Validade:</p>
     
-<div style={{ display: 'flex',  justifyContent: 'space-around', gap: '10px',flexDirection: 'column',boxShadow: "0 2px 4px rgba(0,0,0,0.05)"
+<div style={{ display: 'flex',  justifyContent: 'space-around', gap: '10px',flexDirection: 'column'
 
 }}>
    <span>
@@ -179,4 +179,4 @@ return (
 
 
 
-    export default ControleDeEstoque;
+    export default ControledeEstoque;
