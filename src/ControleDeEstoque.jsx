@@ -10,11 +10,11 @@ function ControledeEstoque() {
     }
 
     let tabela = {
-        marginTop: "20px",
+        marginTop: "60px",
         border: "1px solid black",
        
 
-  borderSpacing:'10px',
+  borderSpacing:'40px',
     }
 
     let linhaTabela = {
@@ -25,9 +25,15 @@ function ControledeEstoque() {
 let estoqueBaixo = {
     display: "flex",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center"   
     
-    
+}
+
+let th={
+    textAlign: "center",
+    padding: "10px",
+    backgroundColor: "#f2f2f2",
+    fontWeight: "bold"
 }
 
 const corSinaleira = (quantidade, minimo) => {
@@ -39,10 +45,14 @@ const corSinaleira = (quantidade, minimo) => {
 const Sinaleira = ({ validade = 0, minimo = 0 }) => {
   if (validade <= 0) {
     return (
-      <span className="relative flex h-3 w-3 inline-block align-middle">
-        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-        <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
-      </span>
+      <div className="flex items-center justify-center">
+     <td className="text-center align-middle">
+  <span className="relative inline-flex h-3 w-3">
+    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+    <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+  </span>
+</td>
+</div>
     );
   }
 
@@ -74,16 +84,16 @@ return (
 <>
  <h1 style={titulo}>Controle de Estoque Inteligente</h1>
 
- <table style={tabela} className="w-full" border="1" cellPadding="8" cellSpacing="0">
+ <table style={tabela} className="w-full" border="1" cellSpacing="40" cellPadding="5">
       <thead>
         <tr style={linhaTabela}>
-            <th>Nome do Medicamento</th>
-          <th>Saldo atual por Medicamento</th>
-          <th>Controle por Lote </th>
-          <th>Controle por Validade</th>
-          <th> Estoque Baixo</th>
-          <th>Medicamentos próximos ao Vencimento</th>
-          <th>Movimentações Realizadas </th>
+            <th style={th}>Nome do Medicamento</th>
+          <th style={th}>Saldo atual por Medicamento</th>
+          <th style={th}>Controle por Lote </th>
+          <th style={th}>Controle por Validade</th>
+          <th style={th}> Estoque Baixo</th>
+          <th style={th}>Medicamentos próximos ao Vencimento</th>
+          <th style={th}>Movimentações Realizadas </th>
         </tr>
       </thead>  
 

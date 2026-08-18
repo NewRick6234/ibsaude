@@ -16,7 +16,8 @@ function DistribuicaoUnidade(){
     
     let tabelacss = {
         marginTop: "40px",
-        border: "1px solid black"
+        border: "1px solid black",
+        
     }
 
     let linhaTabela = {
