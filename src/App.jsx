@@ -38,7 +38,7 @@ function App() {
         <Route path='DistribuicaoUnidade' element={<DistribuicaoUnidade/>}/>
 
         <Route path='Rastreabilidade' element={<Rastreabilidade/>}/>
-
+ 
         <Route path="ViewRegistro" element={<ViewRegistro />}/>
         <Route path='verRemedios' element={<ViewRemedios/>}/>
         <Route path='verLote' element={<ViewLote/>}/>

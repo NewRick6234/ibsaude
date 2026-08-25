@@ -98,8 +98,8 @@ return(
       )}
       </li>
       <li style={rota}>
-        <Link to="PainelAdministrativo">
-          Painel administrativo
+        <Link to="Administrativo">
+          Painel Administrativo
         </Link>
       </li>
 </ul>
