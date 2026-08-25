@@ -61,7 +61,7 @@ const acaoBotaoAdicionar = () => {
       quantidade: quantidade,
       dataEnvio: dataEnvio,
       responsavelLiberacao:responsavelLiberacao,
-      responsavelLiberacao:responsavelRecebimento,
+      responsavelRecebimento:responsavelRecebimento,
       anexacaoPedidoFormal:anexacaoPedidoFormal,
       valorSaida:valorSaida
     }
@@ -82,19 +82,19 @@ return(
         
         {/* criar componente da área onde estará o label e o input */}
 
-        <Input>Unidade de Destino</Input>
+        <Input value={unidadeDestino} onChange={(e) => setUnidadeDestino(e.target.value)}>Unidade de Destino</Input>
 
-        <Input type="number">Quantidade</Input>
+        <Input type="number" value={quantidade} onChange={(e) => setQuantidade(e.target.value)}>Quantidade</Input>
 
-        <Input type="date">Data de Envio</Input>
+        <Input type="date" value={dataEnvio} onChange={(e) => setDataEnvio(e.target.value)}>Data de Envio</Input>
 
-        <Input>Responsável pela Liberação</Input>
+        <Input value={responsavelLiberacao} onChange={(e) => setResponsavelLiberacao(e.target.value)}>Responsável pela Liberação</Input>
 
-        <Input>Responsável pelo Recebimento</Input>
+        <Input value={responsavelRecebimento} onChange={(e) => setResponsavelRecebimento(e.target.value)}>Responsável pelo Recebimento</Input>
 
-        <Input type="file">Anexação do Pedido Formal</Input>
+        <Input type="file" value={anexacaoPedidoFormal} onChange={(e) => setAnexacaoPedidoFormal(e.target.value)}>Anexação do Pedido Formal</Input>
 
-        <Input type="number">Valor de saída</Input>
+        <Input type="number" value={valorSaida} onChange={(e) => setValorSaida(e.target.value)}>Valor de saída</Input>
 
         <Botao onClick={acaoBotaoAdicionar}>Enviar</Botao>
 
@@ -102,7 +102,7 @@ return(
         </div>
         </div>
 
-        <table style={tabela} className="w-full" border="1" cellPadding="8" cellSpacing="0">
+        <table style={tabelacss} className="w-full" border="1" cellPadding="8" cellSpacing="0">
       <thead>
         <tr style={linhaTabela}>
           <th>Unidade Destino</th>
