@@ -1,22 +1,19 @@
-function Botao({children,type="submit", ...props}){
+function Botao({children,type="submit",className = "", style, ...props}){
 
-let botao = {
+let botaoDefaultStyle = {
   backgroundColor: "#0480e6"
 }
-
+const classesCombinadas = `flex w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ${className}`.trim();
     return(
      
         <button
           type={type}
-          {...props}
-          style={botao} 
-          type="button" 
-          className="flex w-full m-8 justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold
-                     text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2
-                      focus-visible:outline-indigo-600"
-        >
-          {children}
-        </button>
+          style={{ ...botaoDefaultStyle, ...style }}  
+          className={classesCombinadas}
+          {...props} // Eventos como onClick e propriedades como disabled passam aqui safely
+    >
+      {children}
+    </button>
       )
 
     }
