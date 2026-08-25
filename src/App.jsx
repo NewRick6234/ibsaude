@@ -13,6 +13,9 @@ import CadastroUnidadeSaude from './CadastroUnidadeSaude'
 import ViewRegistro from './ViewRegistro'
 
 import ControleDeEstoque from './ControleDeEstoque'
+
+import Rastreabilidade from './Rastreabilidade'
+
 import DistribuicaoUnidade from './DistribuicaoUnidade'
 
 function App() {
@@ -31,6 +34,8 @@ function App() {
         <Route path="TelaDeRegistro" element={<TelaDeRegistro />} />
         <Route path="ControleDeEstoque" element={<ControleDeEstoque />} />
         <Route path='DistribuicaoUnidade' element={<DistribuicaoUnidade/>}/>
+
+        <Route path='Rastreabilidade' element={<Rastreabilidade/>}/>
 
         <Route path="ViewRegistro" element={<ViewRegistro />}/>
         <Route path='verRemedios' element={<ViewRemedios/>}/>
