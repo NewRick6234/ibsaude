@@ -15,9 +15,7 @@ function ViewLote(){
         borderBottom: "1px solid black",
     }
 
-    let ted = {
-    borderRight: "1px solid black"
-    }
+   
 
     const remedios = [
      {
@@ -44,22 +42,22 @@ function ViewLote(){
         <>
         <h1 style={titulo}>Tabela de Lote Medicamentos</h1>
 
- <table style={tabela} className="w-full" border="1" cellPadding="8" cellSpacing="0">
+ <table style={tabela} className="w-full min-w-[1100px]" border="1" cellPadding="8" cellSpacing="0">
       <thead>
         <tr style={linhaTabela} >
           <th>Tipo</th>
-          <th>Fabricante</th>
-          <th>Lote</th>
+          <th className="px-6">Fabricante</th>
+          <th className="px-6">Lote</th>
           <th>Data de Validade</th>
         </tr>
       </thead>
       <tbody>
         {remedios.map((remedio, index) => (
           <tr style={linhaTabela} key={index}>
-            <td style={ted}  className="text-center">{remedio.tipo}</td>
-            <td style={ted}  className="text-center">{remedio.fabricante}</td>
-            <td style={ted} className="text-center">{remedio.lote}</td>
-            <td style={ted} className="text-center">{remedio.data_validade}</td>
+            <td  className="text-center">{remedio.tipo}</td>
+            <td  className="text-center">{remedio.fabricante}</td>
+            <td className="text-center">{remedio.lote}</td>
+            <td className="text-center">{remedio.data_validade}</td>
           </tr>
         ))}
       </tbody>
