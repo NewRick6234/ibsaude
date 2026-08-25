@@ -82,9 +82,20 @@ return(
       </Link>
       </li>
     <li style={rota}>
-      <Link to="Rastreabilidade">
-      Rastreabilidade 
-      </Link>
+      <span onClick={() => setVer(!ver)}>Rastreabilidade</span>
+      {ver && (
+      <ul><li>
+        <Link to='Rastreabilidade'>Painel rastreabilidade</Link>
+        </li>
+        <li>
+          <Link to="ViewRegistro">Detalhes do Lote</Link>
+          </li>
+          <li>
+          <Link to="ViewRegistro">Log de Auditoria</Link>
+          </li>
+          
+          </ul>
+      )}
       </li>
       <li style={rota}>
         <Link to="PainelAdministrativo">
