@@ -61,7 +61,7 @@ const acaoBotaoAdicionar = () => {
       quantidade: quantidade,
       dataEnvio: dataEnvio,
       responsavelLiberacao:responsavelLiberacao,
-      responsavelLiberacao:responsavelRecebimento,
+      responsavelRecebimento:responsavelRecebimento,
       anexacaoPedidoFormal:anexacaoPedidoFormal,
       valorSaida:valorSaida
     }
@@ -71,47 +71,44 @@ const acaoBotaoAdicionar = () => {
 //}
 return(
 <>
- <div className="flex justify-center">
-        <div className="bg-blue-300 w-1/4 flex flex-col items-center">
-         <img style={imagem} src={imagens} className="w-1/4" />
-        <p className="font-semibold">Bem vindo ao IBSaúde</p>  {/*descricao ou introducao */}
+ <div className='flex flex-col gap-5 items-center h-full'className="w-full" border="1" cellPadding="8" cellSpacing="0"> 
 
-        <p>______________</p>
+        <h1 className="font-semibold sm:text-3xl">Distribuição por Unidade de Saúde</h1>  {/*descricao ou introducao */}
 
         <form className="flex flex-col items-center" style={form} method="post">
         
         {/* criar componente da área onde estará o label e o input */}
 
-        <Input>Unidade de Destino</Input>
+        <Input value={unidadeDestino} onChange={(e) => setUnidadeDestino(e.target.value)}>Unidade de Destino</Input>
 
-        <Input type="number">Quantidade</Input>
+        <Input type="number" value={quantidade} onChange={(e) => setQuantidade(e.target.value)}>Quantidade</Input>
 
-        <Input type="date">Data de Envio</Input>
+        <Input type="date" value={dataEnvio} onChange={(e) => setDataEnvio(e.target.value)}>Data de Envio</Input>
 
-        <Input>Responsável pela Liberação</Input>
+        <Input value={responsavelLiberacao} onChange={(e) => setResponsavelLiberacao(e.target.value)}>Responsável pela Liberação</Input>
 
-        <Input>Responsável pelo Recebimento</Input>
+        <Input value={responsavelRecebimento} onChange={(e) => setResponsavelRecebimento(e.target.value)}>Responsável pelo Recebimento</Input>
 
-        <Input type="file">Anexação do Pedido Formal</Input>
+        <Input type="file" value={anexacaoPedidoFormal} onChange={(e) => setAnexacaoPedidoFormal(e.target.value)}>Anexação do Pedido Formal</Input>
 
-        <Input type="number">Valor de saída</Input>
+        <Input type="number" value={valorSaida} onChange={(e) => setValorSaida(e.target.value)}>Valor de saída</Input>
 
         <Botao onClick={acaoBotaoAdicionar}>Enviar</Botao>
 
         </form>
         </div>
-        </div>
 
-        <table style={tabela} className="w-full" border="1" cellPadding="8" cellSpacing="0">
+
+        <table style={tabelacss} className="w-full " border="1" cellPadding="8" cellSpacing="0">
       <thead>
         <tr style={linhaTabela}>
-          <th>Unidade Destino</th>
-          <th>Quantidade</th>
-          <th>Data de Envio</th>
-          <th>Responsável pela Liberação</th>
-          <th>Responsável pelo Recebimento</th>
-          <th>Anexação do Pedido Formal</th>
-          <th>Valor de Saída</th>
+          <th className="px-6">Unidade Destino</th>
+          <th className="px-6">Quantidade</th>
+          <th className="px-6">Data de Envio</th>
+          <th className="px-6">Responsável pela Liberação</th>
+          <th className="px-6">Responsável pelo Recebimento</th>
+          <th className="px-6">Anexação do Pedido Formal</th>
+          <th className="px-6">Valor de Saída</th>
         </tr>
       </thead>
       <tbody>

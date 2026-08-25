@@ -15,7 +15,7 @@ function LoteMedicamento() {
 
 
 
-         <Botao></Botao>
+         <Botao>Cadastrar</Botao>
 
 
 </form>
