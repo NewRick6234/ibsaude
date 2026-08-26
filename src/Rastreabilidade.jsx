@@ -8,72 +8,73 @@ function Rastreabilidade(){
         <><div className='min-w-5xl w-full flex flex-col gap-4 items-center'>
              <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-4 mb-8'>
                             <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
-                                            <p className="p-10 uppercase">entries (24)</p>
-                                            <p className="text-blue-600"><strong className="text-4xl text-black">1,248</strong> up 12%</p>
+                                            <p className="p-10 uppercase">entradas (24)</p>
+                                            <p className="text-blue-600"><strong className="text-4xl text-black">1,248</strong> ↑ 12%</p>
                                     
                             </div>
                             <div className='bg-surface-container-lowest border border-outline-variant p-4 rounded-lg'>
-                                   <p className=" uppercase">exits (24)</p>
-                                    <p className="text-red-600"><strong className="text-4xl text-black">948</strong> down 3%</p>
+                                   <p className=" uppercase">saídas (24)</p>
+                                    <p className="text-red-600"><strong className="text-4xl text-black">948</strong> ↓ 3%</p>
                             </div>
 
                             <div className="bg-surface-container-lowest justify-center items-center flex flex-col border border-outline-variant p-4 rounded-lg max-w-100">
                                 <Botao className="mb-1 mt-1 w-75">
-                                    Scan Batch
+                                    Escanear Lote
                                 </Botao>
                                 <Botao className="mb-1 mt-1 w-75">
-                                    New Entry
+                                    Nova entrada
                                 </Botao>
                                      
                             </div>
                              
             </div>
-            <div className='w-full flex flex-col items-center'>
-            <div className="w-full h-10 border rounded-2xl flex justify-between mb-7">
-                <h2>Recent Tracking Events</h2>
-                <a href="" className="text-blue-600"><h2>View Logs</h2></a>
-            </div>
-            <table className="gap-2 w-full">
-                <thead>
-                    <tr className="border h-2">
-                        <th className="border px-3 uppercase">batch</th>
-                        <th className="border px-3 uppercase">timestamp</th>
-                        <th className="border px-3 uppercase">location</th>
-                        <th className="border px-3 uppercase">handler</th>
-                        <th className="border px-3 uppercase">status</th>
+            <div className='w-full flex flex-col items-center border-separate border-spacing-0 border border-black rounded-t-lg overflow-hidden'>
+                <div className="w-full flex items-center justify-between border-b h-15 font-bold">
+                    <p >fdsafds</p>
+                    <p>fsdfdfsda</p>
+                </div>
+            <table className="w-full ">
+                <thead className="divide-y divide-black text-center border-b border-black">
+                 
+                    <tr>
+                    <th className="py-2 uppercase">Lote</th>
+                    <th className="py-2 uppercase">hora</th>
+                    <th className="py-2 uppercase">localização</th>
+                    <th className="py-2 uppercase">responsavel</th>
+                    <th className="py-2 uppercase">status</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody className="divide-y divide-black text-center">
                     <tr>
-                        <td className="border text-center">test</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
+                    <td className="py-2">test</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
                     </tr>
                     <tr>
-                        <td className="border text-center">test</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
+                    <td className="py-2">test</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
                     </tr>
                     <tr>
-                        <td className="border text-center">test</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
+                    <td className="py-2">test</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
                     </tr>
                     <tr>
-                        <td className="border text-center">test</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
-                        <td className="border text-center">teste</td>
+                    <td className="py-2">test</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
+                    <td className="py-2">teste</td>
                     </tr>
                 </tbody>
-            </table>
+                </table>
             </div>
 
         </div>
