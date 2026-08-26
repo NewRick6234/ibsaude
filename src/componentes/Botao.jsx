@@ -3,7 +3,7 @@ function Botao({children,type="submit",className = "", style, ...props}){
 let botaoDefaultStyle = {
   backgroundColor: "#0480e6"
 }
-const classesCombinadas = `flex w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ${className}`.trim();
+const classesCombinadas = `flex min-w-50 justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ${className}`.trim();
     return(
      
         <button
