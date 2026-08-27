@@ -98,7 +98,7 @@ return(
       )}
       </li>
       <li style={rota}>
-        <Link to="Administrativo">
+        <Link to="PainelAdministrativo">
           Painel Administrativo
         </Link>
       </li>
