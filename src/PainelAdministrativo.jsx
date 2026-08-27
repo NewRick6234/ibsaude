@@ -1,4 +1,5 @@
 import React from 'react';
+import Dashboard from './Dashboard';
 import {
   LineChart,
   Line,
@@ -35,15 +36,16 @@ const formatarMoeda = (valor) =>
 
 export default function PainelAdministrativo() {
   return (
-    <div style={{ padding: '20px', fontFamily: 'sans-serif', backgroundColor: '#f8fafc' }}>
-      <h2 style={{ color: '#0f172a', marginBottom: '20px' }}>
+    <div style={{ padding: '40px', fontFamily: 'sans-serif', backgroundColor: '#f8fafc' }}>
+      <h2 style={{ color: '#0f172a', marginBottom: '40px' }}>
         Painel Administrativo - Controle de Investimentos
       </h2>
+      
 
       {/* Gráfico 1: Investimento por Medicamentos */}
       <div style={{ backgroundColor: '#fff', padding: '16px', borderRadius: '8px', marginBottom: '24px', border: '1px solid #e2e8f0' }}>
         <h3 style={{ color: '#334155', fontSize: '1.1rem' }}>Total de Investimento por Medicamento</h3>
-        <div style={{ width: '100%', height: 300 }}>
+        <div style={{ width: '80%', height: 200 }}>
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={dadosMedicamentos}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
@@ -62,7 +64,7 @@ export default function PainelAdministrativo() {
       {/* Gráfico 2: Relatório por Unidade (Norte, Sul, Leste, Oeste) */}
       <div style={{ backgroundColor: '#fff', padding: '16px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
         <h3 style={{ color: '#334155', fontSize: '1.1rem' }}>Relatório de Investimento por Unidade</h3>
-        <div style={{ width: '100%', height: 300 }}>
+        <div style={{ width: '80%', height: 200 }}>
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={dadosUnidades}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
@@ -74,6 +76,7 @@ export default function PainelAdministrativo() {
               <Bar dataKey="orcamento" name="Orçamento Planejado" fill="#cbd5e1" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
+          
         </div>
       </div>
     </div>
