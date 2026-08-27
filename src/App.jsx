@@ -20,6 +20,7 @@ import DistribuicaoUnidade from './DistribuicaoUnidade'
 //import DashboardChart from './DashboardChart'
 import CardEstoque from './CardEstoque'
 import CardArea from './CardArea'
+import Dashboard from './Dashboard'
 function App() {
 
   return (
@@ -38,7 +39,7 @@ function App() {
         <Route path='DistribuicaoUnidade' element={<DistribuicaoUnidade/>}/>
 
         <Route path='Rastreabilidade' element={<Rastreabilidade/>}/>
-  <Route path='PainelAdministrativo' element={<PainelAdministrativo/>}/>
+  <Route path='PainelAdministrativo' element={<Dashboard/>}/>
         <Route path="ViewRegistro" element={<ViewRegistro />}/>
         <Route path='verRemedios' element={<ViewRemedios/>}/>
         <Route path='verLote' element={<ViewLote/>}/>
