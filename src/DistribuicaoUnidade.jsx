@@ -71,12 +71,9 @@ const acaoBotaoAdicionar = () => {
 //}
 return(
 <>
- <div className="flex justify-center">
-        <div className="bg-blue-300 w-1/4 flex flex-col items-center">
-         <img style={imagem} src={imagens} className="w-1/4" />
-        <p className="font-semibold">Bem vindo ao IBSaúde</p>  {/*descricao ou introducao */}
+ <div className='flex flex-col gap-5 items-center h-full'className="w-full" border="1" cellPadding="8" cellSpacing="0"> 
 
-        <p>______________</p>
+        <h1 className="font-semibold sm:text-3xl">Distribuição por Unidade de Saúde</h1>  {/*descricao ou introducao */}
 
         <form className="flex flex-col items-center" style={form} method="post">
         
@@ -100,18 +97,18 @@ return(
 
         </form>
         </div>
-        </div>
 
-        <table style={tabelacss} className="w-full" border="1" cellPadding="8" cellSpacing="0">
+
+        <table style={tabelacss} className="w-full " border="1" cellPadding="8" cellSpacing="0">
       <thead>
         <tr style={linhaTabela}>
-          <th>Unidade Destino</th>
-          <th>Quantidade</th>
-          <th>Data de Envio</th>
-          <th>Responsável pela Liberação</th>
-          <th>Responsável pelo Recebimento</th>
-          <th>Anexação do Pedido Formal</th>
-          <th>Valor de Saída</th>
+          <th className="px-6">Unidade Destino</th>
+          <th className="px-6">Quantidade</th>
+          <th className="px-6">Data de Envio</th>
+          <th className="px-6">Responsável pela Liberação</th>
+          <th className="px-6">Responsável pelo Recebimento</th>
+          <th className="px-6">Anexação do Pedido Formal</th>
+          <th className="px-6">Valor de Saída</th>
         </tr>
       </thead>
       <tbody>
