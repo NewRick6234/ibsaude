@@ -1,34 +1,32 @@
-import Titulo from "../Titulo";
-import CardEstoque from "../CardEstoque";
+import Titulo from "./Titulo";
+import CardEstoque from "./CardEstoque";
 import { Package, AlertTriangle, DollarSign } from "lucide-react";
-import  PainelAdministrativo from "../PainelAdministrativo";
+import  PainelAdministrativo from "./PainelAdministrativo";
 export default function Dashboard() {
   return (
-    <div style={{ padding: '24px', backgroundColor: '##e0f2fe', minHeight: '100vh', fontFamily: 'sans-serif' }}>
+    <div style={{ padding: '44px',   width: '80vw', backgroundColor: '#fff', minHeight: '100vh', fontFamily: 'sans-serif' }}>
       
       {/* Título Centralizado */}
-      <Titulo style={{ color: '#0f172a', textAlign: 'center', marginBottom: '24px', fontSize: '1.0rem' }}>
+    
+      <Titulo style={{ display: 'flex', color: '#0f172a', textAlign: 'center', marginBottom: '24px', fontSize: '1.5rem',backgroundColor: '#e0f2fe', padding: '32px', borderRadius: '18px' }}>
+        
         Painel Administrativo
       </Titulo>
       
-    <div className="p-8 space-y-6 bg-gray-50 min-h-screen">
-      
-      <Titulo texto="Painel Administrativo"  />
-      </div>
       {/* Cards de Indicadores */}
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div style={{
+        position: 'relative',
         display: 'flex',
         gap: '20px',
-        flexWrap: 'wrap',
-        justifyContent: 'center', /* Centraliza os cards caso a tela diminua */
-        width: '100%',
-        maxWidth: '1000px',
-        justifyContent: 'flex-end',
-        marginTop: '-15px',
+        zIndex: 1000,
+        // flexWrap: 'wrap',
+        justifyContent: 'space-around', /* Centraliza os cards caso a tela diminua */
+     
+        // maxWidth: '1000px',
+        marginTop: '-30px',
       
-        paddingLeft:'194px'
+        paddingLeft:'20px'
 
       }}>
         <CardEstoque 
@@ -55,7 +53,8 @@ export default function Dashboard() {
           corBorda="#10b981"
         />
       </div>
-      </div>
+      <PainelAdministrativo />
+      
      </div>
   );
 }
