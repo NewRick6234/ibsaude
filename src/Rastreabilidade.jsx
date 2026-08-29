@@ -1,5 +1,6 @@
 import Input  from "./componentes/Input"
 import Botao from "./componentes/Botao"
+import { Link, Outlet } from 'react-router-dom'
 
 function Rastreabilidade(){
 
@@ -28,10 +29,14 @@ function Rastreabilidade(){
                             </div>
                              
             </div>
-            <div className='w-full flex flex-col items-center border-separate border-spacing-0 border border-black rounded-t-lg overflow-hidden'>
-                <div className="w-full flex items-center justify-between border-b h-15 font-bold">
-                    <p >fdsafds</p>
-                    <p>fsdfdfsda</p>
+            <div className='w-full flex flex-col border border-black rounded-t-lg overflow-hidden'>
+                <div className="w-full flex items-center justify-between border-b h-12 font-bold box-border"
+                style={{ paddingLeft: '16px', paddingRight: '16px' }}
+                >
+                    <p className="pl-4">Eventos de Rastreamento Recentes</p>
+                    <p className="text-blue-400 pr-4">
+                        <Link to='LogAuditoria'>Cadastro de Medicamentos →</Link>
+                    </p>
                 </div>
             <table className="w-full ">
                 <thead className="divide-y divide-black text-center border-b border-black">
@@ -45,33 +50,33 @@ function Rastreabilidade(){
                     </tr>
                 </thead>
                 <tbody className="divide-y divide-black text-center">
-                    <tr>
-                    <td className="py-2">test</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
-                    </tr>
-                    <tr>
-                    <td className="py-2">test</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
-                    </tr>
-                    <tr>
-                    <td className="py-2">test</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
-                    </tr>
-                    <tr>
-                    <td className="py-2">test</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
-                    <td className="py-2">teste</td>
+                   <tr>
+                        <td className="py-2">B-992-XYZ</td>
+                        <td className="py-2">2023-10-27 14:32:01</td>
+                        <td className="py-2">Instalação de Armazenamento Alfa</td>
+                        <td className="py-2">Dr. André Silva</td>
+                        <td className="py-2">Armazenado</td>
+                        </tr>
+                        <tr>
+                        <td className="py-2">B-881-ABC</td>
+                        <td className="py-2">2023-10-27 14:15:44</td>
+                        <td className="py-2">Centro de Trânsito Beta</td>
+                        <td className="py-2">Thiago Santos</td>
+                        <td className="py-2">Em Trânsito</td>
+                        </tr>
+                        <tr>
+                        <td className="py-2">B-774-DEF</td>
+                        <td className="py-2">2023-10-27 13:50:12</td>
+                        <td className="py-2">Doca de Recebimento Gama</td>
+                        <td className="py-2">Karine Lima</td>
+                        <td className="py-2">Sinalizado</td>
+                        </tr>
+                        <tr>
+                        <td className="py-2">B-665-GHI</td>
+                        <td className="py-2">2023-10-27 13:22:05</td>
+                        <td className="py-2">Instalação de Armazenamento Alfa</td>
+                        <td className="py-2">Sistema Automatizado</td>
+                        <td className="py-2">Armazenado</td>
                     </tr>
                 </tbody>
                 </table>
