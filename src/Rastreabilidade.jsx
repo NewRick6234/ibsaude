@@ -35,7 +35,7 @@ function Rastreabilidade(){
                 >
                     <p className="pl-4">Eventos de Rastreamento Recentes</p>
                     <p className="text-blue-400 pr-4">
-                        <Link to='LogAuditoria'>Cadastro de Medicamentos →</Link>
+                        <Link to='/Menu/LogAuditoria'>Cadastro de Medicamentos →</Link>
                     </p>
                 </div>
             <table className="w-full ">

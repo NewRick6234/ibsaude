@@ -88,7 +88,7 @@ return(
         <Link to='Rastreabilidade'>Painel rastreabilidade</Link>
         </li>
         <li>
-          <Link to="LogAuditoria">Detalhes do Lote</Link>
+          <Link to="LoteRastreabilidade">Detalhes do Lote</Link>
           </li>
           <li>
           <Link to="LogAuditoria">Log de Auditoria</Link>

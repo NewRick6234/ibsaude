@@ -16,12 +16,14 @@ import ControleDeEstoque from './ControleDeEstoque'
 
 import Rastreabilidade from './Rastreabilidade'
 import LogAuditoria from './LogAuditoria'
+import LoteRastreabilidade from './LoteRastreabilidade'
 import PainelAdministrativo from './PainelAdministrativo'
 import DistribuicaoUnidade from './DistribuicaoUnidade'
 //import DashboardChart from './DashboardChart'
 import CardEstoque from './CardEstoque'
 import CardArea from './CardArea'
 import Dashboard from './Dashboard'
+import { ImageOff } from 'lucide-react'
 function App() {
 
   return (
@@ -41,6 +43,7 @@ function App() {
 
         <Route path='Rastreabilidade' element={<Rastreabilidade/>}/>
         <Route path='LogAuditoria' element={<LogAuditoria/>}/>
+        <Route path='LoteRastreabilidade' element={<LoteRastreabilidade/>}/>
   <Route path='PainelAdministrativo' element={<Dashboard/>}/>
         <Route path="ViewRegistro" element={<ViewRegistro />}/>
         <Route path='verRemedios' element={<ViewRemedios/>}/>
