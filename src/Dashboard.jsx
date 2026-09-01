@@ -4,7 +4,7 @@ import { Package, AlertTriangle, DollarSign } from "lucide-react";
 import  PainelAdministrativo from "./PainelAdministrativo";
 export default function Dashboard() {
   return (
-    <div style={{ padding: '44px',   width: '80vw', backgroundColor: '#fff', minHeight: '100vh', fontFamily: 'sans-serif' }}>
+    <div style={{  display:'flex', flexDirection:'column', backgroundColor: '#fff', minHeight: '100vh', fontFamily: 'sans-serif'}}>
       
       {/* Título Centralizado */}
     

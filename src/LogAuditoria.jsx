@@ -123,7 +123,6 @@ function LogAuditoria(){
                 </table>
             </div>
         </div>
-        <h1>Log Auditoria</h1>
         </>
     )
 
