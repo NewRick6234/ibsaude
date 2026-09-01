@@ -24,6 +24,7 @@ import CardEstoque from './CardEstoque'
 import CardArea from './CardArea'
 import Dashboard from './Dashboard'
 import { ImageOff } from 'lucide-react'
+import Footer from './componentes/footer'
 function App() {
 
   return (
@@ -53,6 +54,7 @@ function App() {
         <Route path='CardArea' element={<CardArea/>}/>
       </Route>
     </Routes>
+    <Footer></Footer>
     </div>
     </>
 
