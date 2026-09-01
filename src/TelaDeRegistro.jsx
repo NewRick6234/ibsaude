@@ -49,8 +49,8 @@ function TelaDeRegistro(){
   }
         return(
         <>
-        <div className='w-full flex flex-col gap-4 items-center'>
-                <div className='w-full flex items-center justify-center'>
+        <div className='max-w-6xl w-full flex flex-col gap-4 items-center'>
+                <div className=' w-full flex items-center justify-center'>
                         <h1 className=''><strong>Registro de Compra</strong></h1>
                 </div>
                  

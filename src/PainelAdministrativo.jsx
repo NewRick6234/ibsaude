@@ -36,7 +36,7 @@ const formatarMoeda = (valor) =>
 
 export default function PainelAdministrativo() {
   return (
-    <div style={{ padding: '40px', fontFamily: 'sans-serif', backgroundColor: '#f8fafc' }}>
+    <div style={{ fontFamily: 'sans-serif', backgroundColor: '#f8fafc' }}>
       <h2 style={{ color: '#0f172a', marginBottom: '40px' }}>
         Painel Administrativo - Controle de Investimentos
       </h2>

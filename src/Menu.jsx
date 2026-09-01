@@ -36,10 +36,10 @@ function Menu(){
 
 return(
     <>
-<div style={rodape}>
+<div className='flex h-28 border-b-4 w-full border-blue-500'>
 <img style={imagem} src={imagens}/>
 
-<ul style={rotas}>
+<ul className='w-full flex gap-3 items-center justify-center'>
     <li style={rota}>
       <span onClick={() => setCadastro(!cadastro)}>Cadastrar</span>
       {cadastro && (
@@ -103,6 +103,8 @@ return(
         </Link>
       </li>
 </ul>
+<img style={imagem} src={imagens}/>
+
 </div>
 
       <div style={{ padding: '20px' }}>

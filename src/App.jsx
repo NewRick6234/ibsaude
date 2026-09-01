@@ -24,12 +24,12 @@ import CardEstoque from './CardEstoque'
 import CardArea from './CardArea'
 import Dashboard from './Dashboard'
 import { ImageOff } from 'lucide-react'
-import Footer from './componentes/footer'
+import Footer from './componentes/Footer'
 function App() {
 
   return (
     <> 
-    <div className='flex flex-col items-center '>
+    <div className='flex flex-col min-h-screen items-center w-full '>
     <Routes>
       <Route path="/" element={<TelaInicial />} />
       <Route path="/login" element={<Login />} />
