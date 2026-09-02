@@ -103,7 +103,7 @@ return(
         </Link>
       </li>
 </ul>
-<img style={imagem} src={imagens}/>
+<div style={imagem}></div>
 
 </div>
 
