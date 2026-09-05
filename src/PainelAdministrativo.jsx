@@ -1,5 +1,6 @@
 import React from 'react';
 import Dashboard from './Dashboard';
+import Container from './componentes/container';
 import {
   LineChart,
   Line,
@@ -13,7 +14,6 @@ import {
   ResponsiveContainer
 } from 'recharts';
 
-// 1. Total de Investimento por Categoria de Medicamento (Mensal)
 const dadosMedicamentos = [
   { mes: 'Jan', oncologicos: 420000, biologicos: 310000, antibioticos: 180000 },
   { mes: 'Fev', oncologicos: 450000, biologicos: 340000, antibioticos: 195000 },
@@ -23,7 +23,6 @@ const dadosMedicamentos = [
   { mes: 'Jun', oncologicos: 580000, biologicos: 450000, antibioticos: 240000 },
 ];
 
-// 2. Relatório de Investimento por Região (Unidades: Norte, Sul, Leste, Oeste)
 const dadosUnidades = [
   { unidade: 'Unidade Norte', investimento: 2100000, orcamento: 2500000 },
   { unidade: 'Unidade Sul', investimento: 3400000, orcamento: 3500000 },
@@ -36,49 +35,74 @@ const formatarMoeda = (valor) =>
 
 export default function PainelAdministrativo() {
   return (
-    <div style={{ fontFamily: 'sans-serif', backgroundColor: '#f8fafc' }}>
-      <h2 style={{ color: '#0f172a', marginBottom: '40px' }}>
-        Painel Administrativo - Controle de Investimentos
-      </h2>
-      
+    <Container>
+      <div style={{ 
+        fontFamily: 'sans-serif', 
+        backgroundColor: '#f8fafc', 
+        width: '100%', 
+        boxSizing: 'border-box',
+        padding: '24px' // Espaçamento interno leve para os cards não grudarem na borda da tela
+      }}>
+        <h2 style={{ color: '#0f172a', marginBottom: '24px', textAlign: 'left' }}>
+          Painel Administrativo - Controle de Investimentos
+        </h2>
+        
+        {/* Gráfico 1: Investimento por Medicamentos */}
+        <div style={{ 
+          backgroundColor: '#fff', 
+          padding: '20px', 
+          borderRadius: '8px', 
+          marginBottom: '24px', 
+          border: '1px solid #e2e8f0',
+          width: '100%',
+          boxSizing: 'border-box'
+        }}>
+          <h3 style={{ color: '#334155', fontSize: '1.1rem', marginBottom: '16px' }}>
+            Total de Investimento por Medicamento
+          </h3>
+          <div style={{ width: '100%', height: 300 }}> {/* Aumentado a altura para melhor visualização */}
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={dadosMedicamentos} margin={{ top: 10, right: 30, left: 20, bottom: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <XAxis dataKey="mes" />
+                <YAxis tickFormatter={(v) => `R$ ${v / 1000}k`} />
+                <Tooltip formatter={(valor) => [formatarMoeda(valor), '']} />
+                <Legend />
+                <Line type="monotone" dataKey="oncologicos" name="Oncológicos" stroke="#2563eb" strokeWidth={2} />
+                <Line type="monotone" dataKey="biologicos" name="Biológicos" stroke="#7c3aed" strokeWidth={2} />
+                <Line type="monotone" dataKey="antibioticos" name="Antibióticos" stroke="#059669" strokeWidth={2} />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
 
-      {/* Gráfico 1: Investimento por Medicamentos */}
-      <div style={{ backgroundColor: '#fff', padding: '16px', borderRadius: '8px', marginBottom: '24px', border: '1px solid #e2e8f0' }}>
-        <h3 style={{ color: '#334155', fontSize: '1.1rem' }}>Total de Investimento por Medicamento</h3>
-        <div style={{ width: '80%', height: 200 }}>
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={dadosMedicamentos}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-              <XAxis dataKey="mes" />
-              <YAxis tickFormatter={(v) => `R$ ${v / 1000}k`} />
-              <Tooltip formatter={(valor) => [formatarMoeda(valor), '']} />
-              <Legend />
-              <Line type="monotone" dataKey="oncologicos" name="Oncológicos" stroke="#2563eb" strokeWidth={2} />
-              <Line type="monotone" dataKey="biologicos" name="Biológicos" stroke="#7c3aed" strokeWidth={2} />
-              <Line type="monotone" dataKey="antibioticos" name="Antibióticos" stroke="#059669" strokeWidth={2} />
-            </LineChart>
-          </ResponsiveContainer>
+        {/* Gráfico 2: Relatório por Unidade */}
+        <div style={{ 
+          backgroundColor: '#fff', 
+          padding: '20px', 
+          borderRadius: '8px', 
+          border: '1px solid #e2e8f0',
+          width: '100%',
+          boxSizing: 'border-box'
+        }}>
+          <h3 style={{ color: '#334155', fontSize: '1.1rem', marginBottom: '16px' }}>
+            Relatório de Investimento por Unidade
+          </h3>
+          <div style={{ width: '100%', height: 300 }}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={dadosUnidades} margin={{ top: 10, right: 30, left: 20, bottom: 5 }}>
+                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <XAxis dataKey="unidade" />
+                <YAxis tickFormatter={(v) => `R$ ${(v / 1000000).toFixed(1)}M`} />
+                <Tooltip formatter={(valor) => [formatarMoeda(valor), '']} />
+                <Legend />
+                <Bar dataKey="investimento" name="Investimento Realizado" fill="#0284c7" radius={[4, 4, 0, 0]} />
+                <Bar dataKey="orcamento" name="Orçamento Planejado" fill="#cbd5e1" radius={[4, 4, 0, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       </div>
-
-      {/* Gráfico 2: Relatório por Unidade (Norte, Sul, Leste, Oeste) */}
-      <div style={{ backgroundColor: '#fff', padding: '16px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
-        <h3 style={{ color: '#334155', fontSize: '1.1rem' }}>Relatório de Investimento por Unidade</h3>
-        <div style={{ width: '80%', height: 200 }}>
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={dadosUnidades}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-              <XAxis dataKey="unidade" />
-              <YAxis tickFormatter={(v) => `R$ ${(v / 1000000).toFixed(1)}M`} />
-              <Tooltip formatter={(valor) => [formatarMoeda(valor), '']} />
-              <Legend />
-              <Bar dataKey="investimento" name="Investimento Realizado" fill="#0284c7" radius={[4, 4, 0, 0]} />
-              <Bar dataKey="orcamento" name="Orçamento Planejado" fill="#cbd5e1" radius={[4, 4, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
-          
-        </div>
-      </div>
-    </div>
+    </Container>
   );
 }
