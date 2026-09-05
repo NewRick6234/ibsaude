@@ -1,12 +1,16 @@
 import Input  from "./componentes/Input"
 import Botao from "./componentes/Botao"
+import Container from "./componentes/container"
 import { Link, Outlet } from 'react-router-dom'
 
 function Rastreabilidade(){
 
    
     return(
-        <><div className='min-w-5xl w-full flex flex-col gap-4 items-center'>
+        
+        <>
+        <Container>
+        <div className='min-w-5xl w-full flex flex-col gap-4 items-center'>
              <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-4 mb-8'>
                             <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
                                             <p className="p-10 uppercase">entradas (24)</p>
@@ -84,7 +88,7 @@ function Rastreabilidade(){
 
         </div>
         
-        
+        </Container>
         </>
     )
 

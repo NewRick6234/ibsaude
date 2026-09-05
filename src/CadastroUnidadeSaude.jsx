@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Botao from "./componentes/Botao"
 import Input from "./componentes/Input"
+import Container from "./componentes/container"
 import imagens from "./imagens/ib_saude.png"
 
 
@@ -49,13 +50,14 @@ function CadastroUnidadeSaude(){
      }
 
     return(
-       <div className='flex flex-col gap-5 items-center h-full'className="w-full" border="1" cellPadding="8" cellSpacing="0"> 
+        <Container>
+       <div className='flex flex-col gap-5 items-center h-full w-full' border="1" cellPadding="8" cellSpacing="0"> 
         
         <h1 className="font-semibold sm:text-3xl">Cadastro de Unidade de Saúde</h1>  {/*descricao ou introducao */}
 
         
 
-        <form className="flex flex-col items-center" style={form} method="post">
+        <form className="flex flex-col items-center gap-4 h-full" style={form} method="post">
         
         {/* criar componente da área onde estará o label e o input */}
 
@@ -84,11 +86,10 @@ function CadastroUnidadeSaude(){
 
                 <Botao>Cadastrar</Botao>
         
-        {/* <div className="link" style={link}>
-             <a href="#">Já tenho conta</a>
-        </div> */}
+         
         </form>
        </div>
+       </Container>
     )
 
 }
