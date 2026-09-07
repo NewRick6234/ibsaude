@@ -15,16 +15,21 @@ import ViewRegistro from './ViewRegistro'
 import ControleDeEstoque from './ControleDeEstoque'
 
 import Rastreabilidade from './Rastreabilidade'
-
+import LogAuditoria from './LogAuditoria'
+import LoteRastreabilidade from './LoteRastreabilidade'
+import PainelAdministrativo from './PainelAdministrativo'
 import DistribuicaoUnidade from './DistribuicaoUnidade'
 //import DashboardChart from './DashboardChart'
 import CardEstoque from './CardEstoque'
 import CardArea from './CardArea'
+import Dashboard from './Dashboard'
+import { ImageOff } from 'lucide-react'
+import Footer from './componentes/Footer'
 function App() {
 
   return (
     <> 
-    <div className='flex flex-col items-center '>
+    <div className='flex flex-col min-h-screen items-center w-full '>
     <Routes>
       <Route path="/" element={<TelaInicial />} />
       <Route path="/login" element={<Login />} />
@@ -38,7 +43,9 @@ function App() {
         <Route path='DistribuicaoUnidade' element={<DistribuicaoUnidade/>}/>
 
         <Route path='Rastreabilidade' element={<Rastreabilidade/>}/>
- 
+        <Route path='LogAuditoria' element={<LogAuditoria/>}/>
+        <Route path='LoteRastreabilidade' element={<LoteRastreabilidade/>}/>
+  <Route path='PainelAdministrativo' element={<Dashboard/>}/>
         <Route path="ViewRegistro" element={<ViewRegistro />}/>
         <Route path='verRemedios' element={<ViewRemedios/>}/>
         <Route path='verLote' element={<ViewLote/>}/>
@@ -47,6 +54,7 @@ function App() {
         <Route path='CardArea' element={<CardArea/>}/>
       </Route>
     </Routes>
+    <Footer></Footer>
     </div>
     </>
 

@@ -9,7 +9,7 @@ function ViewRegistro(){
             <div>
                 <h1><strong>Registro de Compra</strong></h1>
             </div>
-            <div className='flex'>
+            <div className='flex gap-1.5 justify-end w-full'>
                 <Botao>Imprimir PDF</Botao>
                 <Botao>Baixar XML</Botao>
                 <Botao>Enviar por Email</Botao>

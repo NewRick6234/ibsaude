@@ -1,9 +1,11 @@
 import Input from './componentes/Input';
 import Botao from './componentes/Botao';
+import Container from './componentes/container';
 function LoteMedicamento() {
     
     
     return (
+        <Container>
         <form  className='flex flex-col items-center' method='post'>
         <Input name="Nome do Medicamento" options={['Paracetamol 500 mg','Dipirona 500 mg','Ibuprofeno 600 mg','Amoxicilina 500 mg','Azitromicina 500 mg','Losartana Potássica 50 mg','Nebacetin®','Cataflam Emulgel®','Sorine Spray','Ambroxol Xarope']}>Nome do medicamento</Input>
 
@@ -19,6 +21,7 @@ function LoteMedicamento() {
 
 
 </form>
+</Container>
     )
 }
 export default LoteMedicamento;

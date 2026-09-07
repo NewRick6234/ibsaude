@@ -4,145 +4,112 @@ import Input from "./componentes/Input"
 import imagens from "./imagens/ib_saude.png"
 
 let contador = 0
-function DistribuicaoUnidade(){
 
-     let imagem = {
-        marginTop: "5px"
-     }
+function DistribuicaoUnidade() {
+  let form = {
+    marginTop: "20px"
+  }
 
-      let form = {
-        marginTop: "20px"
+  const [unidadesSaude, setUnidadesSaude] = useState([])
+  const [tabela, setTabela] = useState([])
+  const [unidadeDestino, setUnidadeDestino] = useState('')
+  const [quantidade, setQuantidade] = useState(0)
+  const [dataEnvio, setDataEnvio] = useState('')
+  const [responsavelLiberacao, setResponsavelLiberacao] = useState('')
+  const [responsavelRecebimento, setResponsavelRecebimento] = useState('')
+  const [anexacaoPedidoFormal, setAnexacaoPedidoFormal] = useState('')
+  const [valorSaida, setValorSaida] = useState(0)
+
+  useEffect(() => {
+    async function buscarDados() {
+      try {
+        const resposta = await fetch('/unidadeSaude.json')
+        const dados = await resposta.json()
+        setUnidadesSaude(dados)
+      } catch (erro) {
+        console.error("Erro ao carregar dados:", erro)
+      }
     }
-    
-    let tabelacss = {
-        marginTop: "40px",
-        border: "1px solid black",
-        
-    }
+    buscarDados()
+  }, [])
 
-    let linhaTabela = {
-        borderBottom: "1px solid black",
-    }
+  const acaoBotaoAdicionar = (e) => {
+    if (e) e.preventDefault(); // Previne o recarregamento da página pelo <form>
 
-        const [unidadesSaude, setUnidadesSaude] = useState([])
-        const [tabela, setTabela]  = useState([])
-        const [unidadeDestino, setUnidadeDestino] = useState('')
-        const [quantidade, setQuantidade] = useState(0)
-        const [dataEnvio, setDataEnvio] = useState('')
-        const [responsavelLiberacao, setResponsavelLiberacao] = useState('')
-        const [responsavelRecebimento, setResponsavelRecebimento] = useState('')
-        const [anexacaoPedidoFormal, setAnexacaoPedidoFormal] = useState('')
-        const [valorSaida, setValorSaida] = useState(0)
-
-
-     
-//const MostrarTabela = () => {
-        useEffect(
-            () => {
-                async function buscarDados(){
-                    const resposta = await fetch('/unidadeSaude.json')
-                    const dados = await resposta.json()
-                    setUnidadesSaude(dados)
-                    console.log(dados)
-                }     
-                buscarDados()
-            }
-        , [])
-
-const acaoBotaoAdicionar = () => {
-
-    alert('Caminho novo')
-
-        let objeto =  {
-
-            
+    let objeto = {
       id: contador++,
-      unidadeDestino: unidadeDestino,
-      quantidade: quantidade,
-      dataEnvio: dataEnvio,
-      responsavelLiberacao:responsavelLiberacao,
-      responsavelRecebimento:responsavelRecebimento,
-      anexacaoPedidoFormal:anexacaoPedidoFormal,
-      valorSaida:valorSaida
+      unidadeDestino,
+      quantidade,
+      dataEnvio,
+      responsavelLiberacao,
+      responsavelRecebimento,
+      anexacaoPedidoFormal,
+      valorSaida
     }
 
-        setTabela((prevTabela) => [...prevTabela, objeto]);
-          }
-//}
-return(
-<>
- <div className='flex flex-col gap-5 items-center h-full'className="w-full" border="1" cellPadding="8" cellSpacing="0"> 
+    setTabela((prevTabela) => [...prevTabela, objeto]);
+  }
 
-        <h1 className="font-semibold sm:text-3xl">Distribuição por Unidade de Saúde</h1>  {/*descricao ou introducao */}
+  return (
+    <>
+      <div className="flex flex-col gap-5 items-center w-full">
+        <h1 className="font-semibold sm:text-3xl">Distribuição por Unidade de Saúde</h1>
 
-        <form className="flex flex-col items-center" style={form} method="post">
-        
-        {/* criar componente da área onde estará o label e o input */}
+        <form className="flex flex-col items-center gap-3 mb-3" style={form} onSubmit={acaoBotaoAdicionar}>
+          <Input value={unidadeDestino} onChange={(e) => setUnidadeDestino(e.target.value)}>Unidade de Destino</Input>
+          <Input type="number" value={quantidade} onChange={(e) => setQuantidade(e.target.value)}>Quantidade</Input>
+          <Input type="date" value={dataEnvio} onChange={(e) => setDataEnvio(e.target.value)}>Data de Envio</Input>
+          <Input value={responsavelLiberacao} onChange={(e) => setResponsavelLiberacao(e.target.value)}>Responsável pela Liberação</Input>
+          <Input value={responsavelRecebimento} onChange={(e) => setResponsavelRecebimento(e.target.value)}>Responsável pelo Recebimento</Input>
+          <Input type="file" value={anexacaoPedidoFormal} onChange={(e) => setAnexacaoPedidoFormal(e.target.value)}>Anexação do Pedido Formal</Input>
+          <Input type="number" value={valorSaida} onChange={(e) => setValorSaida(e.target.value)}>Valor de saída</Input>
 
-        <Input value={unidadeDestino} onChange={(e) => setUnidadeDestino(e.target.value)}>Unidade de Destino</Input>
-
-        <Input type="number" value={quantidade} onChange={(e) => setQuantidade(e.target.value)}>Quantidade</Input>
-
-        <Input type="date" value={dataEnvio} onChange={(e) => setDataEnvio(e.target.value)}>Data de Envio</Input>
-
-        <Input value={responsavelLiberacao} onChange={(e) => setResponsavelLiberacao(e.target.value)}>Responsável pela Liberação</Input>
-
-        <Input value={responsavelRecebimento} onChange={(e) => setResponsavelRecebimento(e.target.value)}>Responsável pelo Recebimento</Input>
-
-        <Input type="file" value={anexacaoPedidoFormal} onChange={(e) => setAnexacaoPedidoFormal(e.target.value)}>Anexação do Pedido Formal</Input>
-
-        <Input type="number" value={valorSaida} onChange={(e) => setValorSaida(e.target.value)}>Valor de saída</Input>
-
-        <Botao onClick={acaoBotaoAdicionar}>Enviar</Botao>
-
+          <Botao type="submit">Enviar</Botao>
         </form>
-        </div>
+      </div>
 
-
-        <table style={tabelacss} className="w-full " border="1" cellPadding="8" cellSpacing="0">
-      <thead>
-        <tr style={linhaTabela}>
-          <th className="px-6">Unidade Destino</th>
-          <th className="px-6">Quantidade</th>
-          <th className="px-6">Data de Envio</th>
-          <th className="px-6">Responsável pela Liberação</th>
-          <th className="px-6">Responsável pelo Recebimento</th>
-          <th className="px-6">Anexação do Pedido Formal</th>
-          <th className="px-6">Valor de Saída</th>
-        </tr>
-      </thead>
-      <tbody>
-        {unidadesSaude.map((unidadeSaude, index) => (
-          <tr style={linhaTabela} key={index}>
-            <td className="text-center">{unidadeSaude.unidadeDestino}</td>
-            <td className="text-center">{unidadeSaude.quantidade}</td>
-            <td className="text-center">{unidadeSaude.dataEnvio}</td>
-            <td className="text-center">{unidadeSaude.responsavelLiberacao}</td>
-            <td className="text-center">{unidadeSaude.responsavelRecebimento}</td>
-            <td className="text-center">{unidadeSaude.anexacaoPedidoFormal}</td>
-            <td className="text-center">{unidadeSaude.valorSaida}</td>
-          </tr>
-        ))}
-        {tabela.map(
-            (linha) => (
-              <tr style={linhaTabela} key={linha.id}>
-                <td className='border text-center'>{linha.unidadeDestino}</td>
-                <td className="text-center">{linha.quantidade}</td>
-                <td className='border text-center'>{linha.dataEnvio}</td>
-                <td className='border text-center'>{linha.responsavelLiberacao}</td>
-                <td className='border text-center'>{linha.responsavelRecebimento}</td>
-                <td className='border text-center'>{linha.anexacaoPedidoFormal}</td>
-                <td className='border text-center'>{linha.valorSaida}</td>
-                 
+      {/* Container envoltório que aplica as bordas arredondadas sem cortar */}
+      <div className="w-full mt-10 border border-gray-300 rounded-xl overflow-hidden shadow-sm">
+        <table className="w-full border-collapse">
+          <thead>
+            <tr className="bg-gray-100 border-b border-gray-300">
+              <th className="px-4 py-3 text-center font-bold">Unidade Destino</th>
+              <th className="px-4 py-3 text-center font-bold">Quantidade</th>
+              <th className="px-4 py-3 text-center font-bold">Data de Envio</th>
+              <th className="px-4 py-3 text-center font-bold">Responsável pela Liberação</th>
+              <th className="px-4 py-3 text-center font-bold">Responsável pelo Recebimento</th>
+              <th className="px-4 py-3 text-center font-bold">Anexação do Pedido Formal</th>
+              <th className="px-4 py-3 text-center font-bold">Valor de Saída</th>
+            </tr>
+          </thead>
+          <tbody>
+            {unidadesSaude.map((unidadeSaude, index) => (
+              <tr className="border-b border-gray-200 hover:bg-gray-50" key={index}>
+                <td className="text-center p-3">{unidadeSaude.unidadeDestino}</td>
+                <td className="text-center p-3">{unidadeSaude.quantidade}</td>
+                <td className="text-center p-3">{unidadeSaude.dataEnvio}</td>
+                <td className="text-center p-3">{unidadeSaude.responsavelLiberacao}</td>
+                <td className="text-center p-3">{unidadeSaude.responsavelRecebimento}</td>
+                <td className="text-center p-3">{unidadeSaude.anexacaoPedidoFormal}</td>
+                <td className="text-center p-3">{unidadeSaude.valorSaida}</td>
               </tr>
-                )
-          )}
-      </tbody>
-    </table>
-
-</>
-)
-
-
+            ))}
+            {tabela.map((linha) => (
+              <tr className="border-b border-gray-200 hover:bg-gray-50" key={linha.id}>
+                <td className="text-center p-3">{linha.unidadeDestino}</td>
+                <td className="text-center p-3">{linha.quantidade}</td>
+                <td className="text-center p-3">{linha.dataEnvio}</td>
+                <td className="text-center p-3">{linha.responsavelLiberacao}</td>
+                <td className="text-center p-3">{linha.responsavelRecebimento}</td>
+                <td className="text-center p-3">{linha.anexacaoPedidoFormal}</td>
+                <td className="text-center p-3">{linha.valorSaida}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  )
 }
-export default DistribuicaoUnidade
+
+export default DistribuicaoUnidade;

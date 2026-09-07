@@ -36,10 +36,10 @@ function Menu(){
 
 return(
     <>
-<div style={rodape}>
+<div className='flex h-28 border-b-4 w-full border-blue-500'>
 <img style={imagem} src={imagens}/>
 
-<ul style={rotas}>
+<ul className='w-full flex gap-3 items-center justify-center'>
     <li style={rota}>
       <span onClick={() => setCadastro(!cadastro)}>Cadastrar</span>
       {cadastro && (
@@ -88,21 +88,23 @@ return(
         <Link to='Rastreabilidade'>Painel rastreabilidade</Link>
         </li>
         <li>
-          <Link to="ViewRegistro">Detalhes do Lote</Link>
+          <Link to="LoteRastreabilidade">Detalhes do Lote</Link>
           </li>
           <li>
-          <Link to="ViewRegistro">Log de Auditoria</Link>
+          <Link to="LogAuditoria">Log de Auditoria</Link>
           </li>
           
           </ul>
       )}
       </li>
       <li style={rota}>
-        <Link to="Administrativo">
+        <Link to="PainelAdministrativo">
           Painel Administrativo
         </Link>
       </li>
 </ul>
+<div style={imagem}></div>
+
 </div>
 
       <div style={{ padding: '20px' }}>
