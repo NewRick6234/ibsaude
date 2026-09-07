@@ -1,6 +1,6 @@
 import React from 'react';
 import Dashboard from './Dashboard';
-import Container from './componentes/container';
+import Container from './componentes/Container';
 import {
   LineChart,
   Line,

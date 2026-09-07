@@ -1,6 +1,6 @@
 import Input  from "./componentes/Input"
 import Botao from "./componentes/Botao"
-import Container from "./componentes/container"
+import Container from "./componentes/Container"
 import { Link, Outlet } from 'react-router-dom'
 
 function Rastreabilidade(){

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Botao from "./componentes/Botao"
 import Input from "./componentes/Input"
-import Container from "./componentes/container"
+import Container from "./componentes/Container"
 import imagens from "./imagens/ib_saude.png"
 
 
