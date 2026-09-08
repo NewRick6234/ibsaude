@@ -55,13 +55,13 @@ function TelaDeRegistro(){
                 </div>
                  
                 <div className='w-full grid grid-cols-1 md:grid-cols-4 gap-4 mb-8'>
-                <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
+                <div className="bg-surface-container-lowest flex flex-col items-center border border-outline-variant p-4 rounded-lg">
                                 <Input name="Data da Entrada:"
                                 type="date">
                         </Input>
                         
                 </div>
-                <div className='bg-surface-container-lowest border border-outline-variant p-4 rounded-lg'>
+                <div className='bg-surface-container-lowest border flex flex-col items-center border-outline-variant p-4 rounded-lg'>
                         <Input>
                                 Fornecedor:
                                 
@@ -71,12 +71,12 @@ function TelaDeRegistro(){
                                 
                         </Input>
                 </div>
-                        <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
+                        <div className="bg-surface-container-lowest flex flex-col items-center border border-outline-variant p-4 rounded-lg">
                         <Input>
                                 Numero da Nota Fiscal:
                         </Input>
                 </div>
-                <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
+                <div className="bg-surface-container-lowest flex flex-col items-center border border-outline-variant p-4 rounded-lg">
                         <Input>
                                 Nome do responsável pelo recebimento:
                         </Input>

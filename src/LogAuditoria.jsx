@@ -35,7 +35,7 @@ function LogAuditoria(){
             </div>
 
             <div className='w-full flex flex-col gap-4 items-center justify-center'>
-                <div className='w-full border rounded-lg grid grid-cols-1 md:grid-cols-4 gap-4 mb-32 h-20'>
+                <div className='w-full border flex items-center rounded-lg md:grid-cols-4 gap-4 mb-32 h-20'>
                     <Input
                         type="date"
                     >
