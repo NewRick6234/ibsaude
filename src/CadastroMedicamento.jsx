@@ -2,6 +2,9 @@ import { useState } from 'react';
 import Input from './componentes/Input';
 import Botao from './componentes/Botao';
 
+// Define a URL base usando a variável de ambiente ou o fallback do backend na Vercel
+const API_URL = import.meta.env.VITE_API_URL || 'https://back-end-eta-ten.vercel.app';
+
 function CadastroMedicamento() {
   const [nome, setNome] = useState('');
   const [classificacao, setClassificacao] = useState('Venda Livre');
@@ -10,7 +13,6 @@ function CadastroMedicamento() {
 
   const [listaRemedios, setListaRemedios] = useState([]);
   
-  // Lista de opções da classificação (pode ser expandida dinamicamente)
   const [opcoesClassificacao, setOpcoesClassificacao] = useState([
     'Venda Livre',
     'Antibiótico',
@@ -18,7 +20,6 @@ function CadastroMedicamento() {
     'Uso Hospitalar'
   ]);
 
-  // Função para preencher todos os campos
   const preencherCampos = (remedio) => {
     setNome(remedio.nomeProduto);
     setCodigo(remedio.codigoRegistro || '');
@@ -26,7 +27,6 @@ function CadastroMedicamento() {
 
     const tipoAnvisa = remedio.tipo?.toUpperCase() || '';
 
-    // Mapeamento das respostas da ANVISA para as suas opções
     let novaClassificacao = 'Venda Livre';
 
     if (tipoAnvisa.includes('CONTROLADO')) {
@@ -36,8 +36,6 @@ function CadastroMedicamento() {
     } else if (tipoAnvisa.includes('ANTIBIOTICO') || tipoAnvisa.includes('ANTIMICROBIANO')) {
       novaClassificacao = 'Antibiótico';
     } else if (remedio.tipo && remedio.tipo !== 'N/A') {
-      // Se for uma categoria da ANVISA como "MEDICAMENTO SIMILAR" ou "GENÉRICO",
-      // adiciona a opção ao dropdown para não quebrar a seleção no HTML
       novaClassificacao = remedio.tipo;
       if (!opcoesClassificacao.includes(remedio.tipo)) {
         setOpcoesClassificacao((prev) => [...prev, remedio.tipo]);
@@ -53,7 +51,7 @@ function CadastroMedicamento() {
 
     if (valorDigitado.trim().length >= 3) {
       try {
-        const response = await fetch(`http://localhost:3000/api/medicamentos/buscar?nome=${encodeURIComponent(valorDigitado)}`);
+        const response = await fetch(`${API_URL}/api/medicamentos/buscar?nome=${encodeURIComponent(valorDigitado)}`);
         const data = await response.json();
 
         if (data.medicamentos && data.medicamentos.length > 0) {
@@ -84,7 +82,7 @@ function CadastroMedicamento() {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/cadastrar', {
+      const response = await fetch(`${API_URL}/cadastrar`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nome, classificacao, codigo, uso }),
@@ -149,7 +147,7 @@ function CadastroMedicamento() {
           Uso Específico
         </Input>
 
-        <Botao type="submit" onClick={handleSubmit}>Enviar</Botao>
+        <Botao type="submit">Enviar</Botao>
       </form>
     </div>
   );

@@ -1,4 +1,4 @@
-import Container from "./componentes/container";
+import Container from "./componentes/Container";
 import { useState, useEffect } from "react";
 
 function ControledeEstoque() {
