@@ -50,7 +50,7 @@ function ViewRegistro(){
             </div>
         </div>
         <div>
-            <table className='w-full text-left border border-collapse'>
+            <table className='w-full text-left border border-collapse rounded-lg'>
                 <thead className='border-b-2 '>
                     <tr className='border-b border-outline-variant'>
                         <th className='uppercase p-table-cell text-left p-5'>CODIGO INTERNO/OFICIAL</th>
