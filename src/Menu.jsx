@@ -1,117 +1,122 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import imagens from "./imagens/ib_saude.png"
 
-function Menu(){
+function Menu() {
+  const [menuAberto, setMenuAberto] = useState(null)
+  const menuRef = useRef(null)
 
-
-
-  const[cadastro, setCadastro] = useState(false)
-  const[ver, setVer] = useState(false)
-
-     let rodape = {
-  //  backgroundColor: "cyan",
-  display: "flex",
-  height: "90px",
-  borderBottom: "5px solid #0480e6"
+  const toggleMenu = (nomeMenu) => {
+    setMenuAberto(prev => prev === nomeMenu ? null : nomeMenu)
   }
 
-  let rotas = {
-    display: "flex",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    width: "100vw"
-    // flexWrap: "wrap" 
-    //color: "black" 
+  const fecharMenus = () => {
+    setMenuAberto(null)
   }
 
-  let rota = {
-    fontWeight: "bold",           /* Negrito */
-    textDecoration: "underline"  /* Sublinhado */
+  useEffect(() => {
+    function handleClickFora(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        fecharMenus()
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickFora)
+    return () => {
+      document.removeEventListener('mousedown', handleClickFora)
+    }
+  }, [])
+
+  const rota = {
+    fontWeight: "bold",
+    cursor: "pointer"
   }
 
-  let imagem = {
-    width: "16%"
-  }
+  const dropdownStyle = "absolute top-full left-0 bg-white shadow-lg border border-gray-200 rounded-md py-2 w-52 z-50 flex flex-col gap-2 px-3 font-normal"
 
-return(
+  return (
     <>
-<div className='flex h-28 border-b-4 w-full border-blue-500'>
-<img style={imagem} src={imagens}/>
+      {/* 
+        Ajustes aplicados na div principal:
+        - Removido h-28 fixo e adicionado py-3 (padding vertical limpo)
+        - Substituído style={imagem} por classes Tailwind responsivas no <img>
+      */}
+      <div ref={menuRef} className='flex border-b-4 w-full border-blue-500 items-center justify-between px-6 py-3'>
+        
+        {/* LOGO: Altura controlada para não ultrapassar a linha azul */}
+        <img className="h-14 w-auto object-contain" src={imagens} alt="Logo IBSaúde" />
 
-<ul className='w-full flex gap-3 items-center justify-center'>
-    <li style={rota}>
-      <span onClick={() => setCadastro(!cadastro)}>Cadastrar</span>
-      {cadastro && (
-      <ul>
-        <li><Link to='cadastroMedicamento'>Cadastro de Medicamentos</Link></li>
-        <li><Link to='cadastroSaude'>Unidade de Saude</Link></li>
-        <li><Link to="LoteMedicamentos">Cadastrar Lote de Medicamentos</Link></li>
-      </ul>
-      )}
-    </li>
-     <li style={rota}>
-      <span onClick={() => setVer(!ver)}>Ver</span>
-      {ver && (
-      <ul><li>
-        <Link to='verRemedios'>Medicamentos</Link>
-        </li>
-        <li>
-          <Link to="verLote">Lote de Medicamentos</Link>
-          </li></ul>
-      )}
-    </li>
-    <li style={rota}>
-      <span onClick={() => setVer(!ver)}>Registro</span>
-      {ver && (
-      <ul><li>
-        <Link to='TelaDeRegistro'>Tela De Cadastro</Link>
-        </li>
-        <li>
-          <Link to="ViewRegistro">Visualizar Registro</Link>
-          </li></ul>
-      )}
-      </li>
-    <li style={rota}>
-    
-     <Link to='ControleDeEstoque'>Controle de Estoque</Link>
-      </li>
-    <li style={rota}>
-      <Link to="DistribuicaoUnidade">
-      Distribuição para unidades
-      </Link>
-      </li>
-    <li style={rota}>
-      <span onClick={() => setVer(!ver)}>Rastreabilidade</span>
-      {ver && (
-      <ul><li>
-        <Link to='Rastreabilidade'>Painel rastreabilidade</Link>
-        </li>
-        <li>
-          <Link to="LoteRastreabilidade">Detalhes do Lote</Link>
+        <ul className='flex gap-6 items-center justify-center'>
+          
+          {/* MENU CADASTRAR */}
+          <li className="relative" style={rota}>
+            <span onClick={() => toggleMenu('cadastro')}>Cadastrar ▾</span>
+            {menuAberto === 'cadastro' && (
+              <ul className={dropdownStyle}>
+                <li><Link to='cadastroMedicamento' onClick={fecharMenus} className="hover:text-blue-600">Cadastro de Medicamentos</Link></li>
+                <li><Link to='cadastroSaude' onClick={fecharMenus} className="hover:text-blue-600">Unidade de Saúde</Link></li>
+                <li><Link to="LoteMedicamentos" onClick={fecharMenus} className="hover:text-blue-600">Cadastrar Lote</Link></li>
+              </ul>
+            )}
           </li>
-          <li>
-          <Link to="LogAuditoria">Log de Auditoria</Link>
+
+          {/* MENU VER */}
+          <li className="relative" style={rota}>
+            <span onClick={() => toggleMenu('ver')}>Ver ▾</span>
+            {menuAberto === 'ver' && (
+              <ul className={dropdownStyle}>
+                <li><Link to='verRemedios' onClick={fecharMenus} className="hover:text-blue-600">Medicamentos</Link></li>
+                <li><Link to="verLote" onClick={fecharMenus} className="hover:text-blue-600">Lote de Medicamentos</Link></li>
+              </ul>
+            )}
+          </li>
+
+          {/* MENU REGISTRO */}
+          <li className="relative" style={rota}>
+            <span onClick={() => toggleMenu('registro')}>Registro ▾</span>
+            {menuAberto === 'registro' && (
+              <ul className={dropdownStyle}>
+                <li><Link to='TelaDeRegistro' onClick={fecharMenus} className="hover:text-blue-600">Tela De Cadastro</Link></li>
+                <li><Link to="ViewRegistro" onClick={fecharMenus} className="hover:text-blue-600">Visualizar Registro</Link></li>
+              </ul>
+            )}
+          </li>
+
+          {/* LINKS SIMPLES */}
+          <li style={rota}>
+            <Link to='ControleDeEstoque' onClick={fecharMenus}>Controle de Estoque</Link>
           </li>
           
-          </ul>
-      )}
-      </li>
-      <li style={rota}>
-        <Link to="PainelAdministrativo">
-          Painel Administrativo
-        </Link>
-      </li>
-</ul>
-<div style={imagem}></div>
+          <li style={rota}>
+            <Link to="DistribuicaoUnidade" onClick={fecharMenus}>Distribuição para unidades</Link>
+          </li>
 
-</div>
+          {/* MENU RASTREABILIDADE */}
+          <li className="relative" style={rota}>
+            <span onClick={() => toggleMenu('rastreabilidade')}>Rastreabilidade ▾</span>
+            {menuAberto === 'rastreabilidade' && (
+              <ul className={dropdownStyle}>
+                <li><Link to='Rastreabilidade' onClick={fecharMenus} className="hover:text-blue-600">Painel Rastreabilidade</Link></li>
+                <li><Link to="LoteRastreabilidade" onClick={fecharMenus} className="hover:text-blue-600">Detalhes do Lote</Link></li>
+                <li><Link to="LogAuditoria" onClick={fecharMenus} className="hover:text-blue-600">Log de Auditoria</Link></li>
+              </ul>
+            )}
+          </li>
+
+          <li style={rota}>
+            <Link to="PainelAdministrativo" onClick={fecharMenus}>Painel Administrativo</Link>
+          </li>
+        </ul>
+
+        {/* Espaçador do lado direito para manter o menu de links perfeitamente centralizado */}
+        <div className="w-36"></div>
+      </div>
 
       <div style={{ padding: '20px' }}>
         <Outlet />
       </div>
     </>
-)
-
+  )
 }
+
 export default Menu;
