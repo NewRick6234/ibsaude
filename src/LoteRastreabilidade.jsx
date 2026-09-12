@@ -61,7 +61,7 @@ function LoteRastreabilidade(){
                     </tr>
                      <tr className="border-b border-gray-300">
                         <td className="pt-4 text-gray-600">Expiry Date</td>
-                        <td className="pt-4 text-right"><strong>Oct 12, 2025</strong></td>
+                        <td className="pt-4 text-right text-red-700"><strong>Oct 12, 2025</strong></td>
                     </tr>
                      <tr>
                         <td className="py-4 border-gray-300 text-gray-600">Est. Value</td>
