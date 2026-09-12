@@ -55,13 +55,13 @@ function TelaDeRegistro(){
                 </div>
                  
                 <div className='w-full grid grid-cols-1 md:grid-cols-4 gap-4 mb-8'>
-                <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
-                                <Input name="Data da Entrada:"
-                                type="date">
+                <div className="bg-surface-container-lowest flex flex-col items-center border border-gray-300 border-outline-variant p-4 rounded-lg">
+                                <Input type="date">
+                                Data de Entrada:
                         </Input>
                         
                 </div>
-                <div className='bg-surface-container-lowest border border-outline-variant p-4 rounded-lg'>
+                <div className='bg-surface-container-lowest border border-gray-300 flex flex-col items-center border-outline-variant p-4 rounded-lg'>
                         <Input>
                                 Fornecedor:
                                 
@@ -71,18 +71,18 @@ function TelaDeRegistro(){
                                 
                         </Input>
                 </div>
-                        <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
+                        <div className="bg-surface-container-lowest flex flex-col items-center border border-gray-300 border-outline-variant p-4 rounded-lg">
                         <Input>
                                 Numero da Nota Fiscal:
                         </Input>
                 </div>
-                <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
+                <div className="bg-surface-container-lowest flex flex-col items-center border border-gray-300 border-outline-variant p-4 rounded-lg">
                         <Input>
                                 Nome do responsável pelo recebimento:
                         </Input>
                 </div>
                 </div>
-                <div className='w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-6 mb-8 flex items-center justify-between gap-110'>
+                <div className='w-full bg-surface-container-lowest border border-gray-300 border-outline-variant rounded-lg p-6 mb-8 flex items-center justify-between gap-110'>
                     <div className='h-30 w-100 flex items-center gap-3'>
                         <div className='p-4'>
                             <img className='h-20 p-2' src={imagem} alt="imagem" />
@@ -104,11 +104,11 @@ function TelaDeRegistro(){
          
                 
         
-                        <div className='w-full flex flex-col items-center'>
+                        <div className='border border-gray-300 rounded-lg p-4 w-full flex flex-col items-center'>
 
-                                <table className="gap-2 w-full">
+                                <table className="w-full ">
                                 <thead>
-                                <tr className='border-2 h-20'>
+                                <tr className='h-30 w-full border-b border-gray-300'>
                                         <th><Input 
                                                 value={codigo}
                                                 onChange ={(e) => setCodigo(e.target.value)}
@@ -160,31 +160,31 @@ function TelaDeRegistro(){
                                                 onChange = { (e) => setPreco(e.target.value)}
                                         >Valor Unitário:</Input>
                                         </th>
-                                        <th><p> Total: {quantidade * preco}</p></th>
+                                        <th className='p-4'><p> Total: {quantidade * preco}</p></th>
 
                                 </tr>
                                 </thead>
                                 <tbody>
                                 {tabela.map(
                                 (linha) => (
-                                <tr className='border h-10' key={linha.id}>
-                                        <td className='border text-center'>{linha.codigo}</td>
-                                        <td className='border text-center'>{linha.nome}</td>
-                                        <td className='border text-center'>{linha.tipo}</td>
-                                        <td className='border text-center'>{linha.quantidade}</td>
-                                        <td className='border text-center'>{linha.preco}</td>
-                                        <td className='border text-center'><p> Total: {linha.quantidade * linha.preco}</p></td>
+                                <tr className=' ' key={linha.id}>
+                                        <td className='border-b border-gray-300 px-4 text-center'>{linha.codigo}</td>
+                                        <td className='border-b border-gray-300 px-4 text-center'>{linha.nome}</td>
+                                        <td className='border-b border-gray-300 px-4 text-center'>{linha.tipo}</td>
+                                        <td className='border-b border-gray-300 px-4 text-center'>{linha.quantidade}</td>
+                                        <td className='border-b border-gray-300 px-4 text-center'>{linha.preco}</td>
+                                        <td className='border-b border-gray-300 px-4 text-center'><p> Total: {linha.quantidade * linha.preco}</p></td>
                                         
                                 </tr>
                                         )
                                 )}
-                                <tr className='border'>  
-                                        <td className='text-center'><p></p></td>
-                                        <td className='text-center'><p></p></td>
-                                        <td className='text-center'><p></p></td>
-                                        <td className='text-center'><p></p></td>
-                                        <td className='border text-center'><p> Total Geral:</p></td>
-                                        <td className='border text-center'><p> 
+                                <tr>  
+                                        <td className='border-b border-gray-300 text-center'><p></p></td>
+                                        <td className='border-b border-gray-300 text-center'><p></p></td>
+                                        <td className='border-b border-gray-300 text-center'><p></p></td>
+                                        <td className='border-b border-gray-300 text-center'><p></p></td>
+                                        <td className='border-b border-gray-300 text-center'><p> Total Geral:</p></td>
+                                        <td className='border-b border-gray-300 text-center'><p> 
                                                 {total}
                                                 </p></td>
                                 </tr>
@@ -193,7 +193,7 @@ function TelaDeRegistro(){
                                 </tbody>
                         </table>
 
-                                <Botao>Enviar Nota</Botao>
+                                <Botao className='m-4'>Enviar Nota</Botao>
                         </div>
                         
                 

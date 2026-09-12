@@ -13,7 +13,7 @@ function Rastreabilidade(){
         <div className='min-w-5xl w-full flex flex-col gap-4 items-center'>
              <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-4 mb-8'>
                             <div className="bg-surface-container-lowest border border-outline-variant p-4 rounded-lg">
-                                            <p className="p-10 uppercase">entradas (24)</p>
+                                            <p className="uppercase">entradas (24)</p>
                                             <p className="text-blue-600"><strong className="text-4xl text-black">1,248</strong> ↑ 12%</p>
                                     
                             </div>
